@@ -7,6 +7,7 @@ const Home = () => {
         <Aboutus />
         <Appointment />
         <h1>Hello</h1>
+        <p>test for git branch</p>
     </>
   )
 }
