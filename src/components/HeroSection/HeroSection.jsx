@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./herosection.css";
 import logo from "../../assets/images/templogo.png";
 import Heroslider from "./HeroSlider";
+import Teeth from "../../assets/images/hero-teeth.png";
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
   const handleScroll = () => {
@@ -15,7 +16,7 @@ const HeroSection = () => {
 
   return (
     <header>
-      <nav className={scrolled ? 'scrolled' : '' }>
+      <nav className={scrolled ? "scrolled" : ""}>
         <div className="logo">
           <img src={logo} alt="Shree Dental Logo" />
         </div>
@@ -37,10 +38,19 @@ const HeroSection = () => {
           </li>
         </ul>
         <div className="booknow-btn">
-            <a href="#booknow">Book Now</a>
+          <a href="#booknow">Book Now</a>
         </div>
       </nav>
-    <Heroslider/>
+      <Heroslider />
+      <div className="container-teeth">
+        <div className="container-image-bg"></div>
+        <div className="container-image">
+          <img src={Teeth} alt="teeth" />
+        </div>
+        <div className="container-content">
+          <p>We can restore </p><p className="text-color">your dental health issue</p>
+        </div>
+      </div>
     </header>
   );
 };

@@ -10,7 +10,7 @@ const Home = () => {
       <Appointment />
       <h1>Hello</h1>
       <p>test for git branch</p>
-      <div>
+      <div style={{border:"1px solid",overflow:"hidden"}}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
         eaque quaerat debitis nisi vero ipsa maxime nulla eos numquam quisquam!
         Omnis illo hic voluptatum. Tempore explicabo ratione sint vero aliquid?

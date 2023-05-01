@@ -11,7 +11,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(71, 218, 100, 0.2);
-  z-index: 5;
+  z-index: 3;
 }
 .hero-slider__slides {
   display: flex;
@@ -62,7 +62,7 @@
   top: 70%;
   left: 25%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 5;
   width:500px;
   line-height: 20px;
 }
@@ -89,6 +89,10 @@
     transition: all 0.3s ease-in-out;
     color:#fff;
     font-size: 1.2rem;
+}
+.hero-slider__btn:hover{ 
+  background-color: #1fca66;
+  transform: scale(1.1);
 }
 .hero-slider__description{
   font-size: 1.2rem;
