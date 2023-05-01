@@ -1,6 +1,33 @@
-.container-aboutus{
-    display: flex;
+.container-aboutus {
+  display: flex;
+  margin-top: 50px;
 }
-.content-container .blue-text{
-    color: red;
+.container-left {
+  width: 35vw;
+  font-size: 20px;
+  text-align: justify;
+  margin: 62px auto;
+  position: relative;
+  left: 150px;
+}
+.container-left h3 {
+  display: flex;
+  margin-bottom: 12px;
+}
+.container-left .para {
+  color: blue;
+  margin-left: 6px;
+}
+.container-right {
+  height: 48vh;
+  width: 48vh;
+  border-radius: 150px;
+  background-color: #e0ecff;
+  position: relative;
+  left: 270px;
+}
+.container-aboutus img {
+  height: 325px;
+  position: relative;
+  right: 130px;
 }

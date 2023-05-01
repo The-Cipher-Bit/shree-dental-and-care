@@ -1,0 +1,95 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  min-height: 10vh;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  top: 100;
+  z-index: 1000;
+}
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.booknow-btn {
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: #2f41e9;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.booknow-btn a {
+  color: white;
+}
+.booknow-btn:hover {
+  background-color: #1fca66;
+  transform: scale(1.1);
+}
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  font-size: 1rem;
+}
+.nav-list li a {
+  color: #000;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.nav-list li a:hover {
+  color: #2f41e9;
+  transform: scale(1.1);
+}
+
+.scrolled {
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Bellow Slider Teeth image section  */
+.container-teeth {
+  display: flex;
+  height: 8vh;
+  margin-left: 18px;
+  margin-bottom: 25px;
+}
+.container-image-bg {
+  height: 6vh;
+  width: 3vw;
+  border-radius: 30px;
+  background-color: blue;
+  position: relative;
+  left: 12px;
+  top: 20px;
+}
+.container-image img {
+  height: 4vh;
+  width: 5vw;
+  position: relative;
+  left: -39px;
+  top: 27px;
+}
+.container-teeth p {
+  margin-top: 27px;
+  position: relative;
+  left: -44px;
+}
+.container-content{
+    display: flex;
+}
+.text-color{
+    color: blue;
+    margin-left: 5px;
+}
