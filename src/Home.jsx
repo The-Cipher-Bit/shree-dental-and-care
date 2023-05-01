@@ -5,8 +5,6 @@ const Home = () => {
   return (
     <>
         <Aboutus />
-        <Appointment />
-        <h1>Hello</h1>
     </>
   )
 }
