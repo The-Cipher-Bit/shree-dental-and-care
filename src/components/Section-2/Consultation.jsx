@@ -42,8 +42,8 @@ function Consultation() {
           </div>
         </div>
         <div className="container-consultation-right">
-          <h2>Find Your Right Doctor</h2>
-          <h1 style={{ color: "blue" }}>For Best Consultation</h1>
+          <h2 className="textcolor_secondary" style={{fontSize:'2.8rem'}}>Find Your Right Doctor</h2>
+          <h1 className="textcolor_primary"style={{fontSize:'2.8rem'}}>For Best Consultation</h1>
           <div className="detail-section">
             {Detail.map((details) => (
               <div key={details.id} className={details.className}>
