@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import "./Heroslider.css";
+import HeroImage1 from "../../assets/images/heroimage-1.png";
+import HeroImage2 from "../../assets/images/heroimage-2.jpg";
 
 const HeroSlider = () => {
   const images = [
-    "../../src/assets/images/heroimage-1.png",
-    "../../src/assets/images/heroimage-2.jpg",
+    HeroImage1,
+    HeroImage2,
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 

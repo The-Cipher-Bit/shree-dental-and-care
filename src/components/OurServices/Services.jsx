@@ -1,24 +1,28 @@
 import ServiceCard from "./ServiceCard";
 import "./Services.css";
+import testImage from "../../assets/images/hero-teeth.png";
+
+
+
 const Services = () => {
   const services = [
     {
       title: "Dental Implants",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      imageUrl: "../../src/assets/images/hero-teeth.png",
+      imageUrl: testImage,
     },
     {
       title: "Maxillofacial Surgery",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      imageUrl: "../../src/assets/images/hero-teeth.png",
+      imageUrl: testImage,
     },
     {
       title: "Endodontics",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      imageUrl: "../../src/assets/images/hero-teeth.png",
+      imageUrl: testImage,
     },
   ];
   return (
