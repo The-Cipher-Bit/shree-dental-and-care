@@ -13,7 +13,7 @@ const Detail = [
     className: "details-section-1",
     details: "Leaser Technology",
     image: imagea,
-    detaila: "Revolutionizing dental care with laser technology.",
+    detaila:'Revolutionizing dental care with laser technology.'
   },
   {
     id: 2,
@@ -42,12 +42,8 @@ function Consultation() {
           </div>
         </div>
         <div className="container-consultation-right">
-          <h2 className="textcolor_secondary" style={{ fontSize: "2.8rem" }}>
-            Find Your Right Doctor
-          </h2>
-          <h1 className="textcolor_primary" style={{ fontSize: "2.8rem" }}>
-            For Best Consultation
-          </h1>
+          <h2 className="textcolor_secondary" style={{fontSize:'2.8rem'}}>Find Your Right Doctor</h2>
+          <h1 className="textcolor_primary"style={{fontSize:'2.8rem'}}>For Best Consultation</h1>
           <div className="detail-section">
             {Detail.map((details) => (
               <div key={details.id} className={details.className}>
