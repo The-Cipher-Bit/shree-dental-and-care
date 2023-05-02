@@ -14,6 +14,7 @@ const HeroSection = () => {
   };
   window.addEventListener("scroll", handleScroll);
 
+  const linkColor = scrolled ? { color:'black' } : {};
   return (
     <header>
       <nav className={scrolled ? "scrolled" : ""}>
@@ -22,19 +23,29 @@ const HeroSection = () => {
         </div>
         <ul className="nav-list">
           <li>
-            <a href="#">Home</a>
+            <a style={linkColor} href="#">
+              Home
+            </a>
           </li>
           <li>
-            <a href="#about">About Us</a>
+            <a style={linkColor} href="#about">
+              About Us
+            </a>
           </li>
           <li>
-            <a href="#consult">Consultation</a>
+            <a style={linkColor} href="#consult">
+              Consultation
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact Us</a>
+            <a style={linkColor} href="#contact">
+              Contact Us
+            </a>
           </li>
           <li>
-            <a href="#gallery">Gallery</a>
+            <a style={linkColor} href="#gallery">
+              Gallery
+            </a>
           </li>
         </ul>
         <div className="booknow-btn">
@@ -43,12 +54,14 @@ const HeroSection = () => {
       </nav>
       <Heroslider />
       <div className="container-teeth">
-        <div className="container-image-bg"></div>
-        <div className="container-image">
+        <div className="container-teeth-image">
           <img src={Teeth} alt="teeth" />
         </div>
-        <div className="container-content">
-          <p>We can restore </p><p className="text-color">your dental health issue</p>
+        <div className="container-teeth-content">
+          <p>
+            We can restore{" "}
+            <span className="teeth-text-color">your dental health issue</span>
+          </p>
         </div>
       </div>
     </header>
