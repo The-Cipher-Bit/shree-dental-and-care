@@ -5,7 +5,7 @@ import imagea from "../../assets/images/image 48.png";
 import imageb from "../../assets/images/image 49.png";
 import imagec from "../../assets/images/image 50.png";
 
-import Doctor from "../../assets/images/Doctor-1.png";
+import Doctor from "../../assets/images/doctor.png";
 
 const Detail = [
   {
