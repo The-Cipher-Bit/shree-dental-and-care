@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+.textcolor_primary{
+    color: #2F41E9;
+}
+.textcolor_secondary{
+    color: #0D2149;
+}
+
+.title_font{
+    font-family: 'Gugi', sans-serif;
+}

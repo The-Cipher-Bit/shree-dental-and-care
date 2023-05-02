@@ -1,13 +1,35 @@
-import Appointment from "./components/appointment/Appointment";
 import Aboutus from "./components/aboutus/Aboutus";
+import HeroSection from "./components/Herosection/HeroSection";
+import Services from "./components/OurServices/Services";
+import Meet from "./components/MeetOurSpecialist/Meet";
+import Consultation from "./components/Section-2/Consultation";
+import Makeus from "./components/Section-3/Makeus";
+import Appointment from "./components/Appointment/Appointment";
 
 const Home = () => {
+  const Gradient = ({ children }) => {
+    return (
+      <div
+        style={{
+          background: "linear-gradient(180deg,#DAF2FF, #FFFFFF)",
+        }}
+      >
+        {children}
+      </div>
+    );
+  };
   return (
     <>
-        <Aboutus />
-        <Appointment />
-        <h1>Hello</h1>
+      <Gradient>
+        <HeroSection />
+        <Services />
+      </Gradient>
+      <Aboutus />
+      <Consultation />
+      <Makeus />
+      <Meet />
+      <Appointment />
     </>
-  )
-}
-export default Home
+  );
+};
+export default Home;

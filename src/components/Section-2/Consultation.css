@@ -1,0 +1,67 @@
+.container-consultation {
+  height: 90vh;
+  padding-top: 14px;
+  display: flex;
+  position: relative;
+}
+.image-background img {
+  height: 100%;
+  width: 150%;
+  position: absolute;
+  left: -100px;
+  top: 30px;
+}
+.image-background {
+  height: 56vh;
+  width: 28vw;
+  border-radius: 200px;
+  margin-left: 122px;
+  background-color: #e0ecff;
+  position: relative;
+
+}
+.container-bookappointment {
+  height: 40vh;
+  width: 17vw;
+  background-color: #efeaea;
+  border-radius: 12px;
+  position: absolute;
+  top: 240px;
+  left: 360px;
+}
+.container-consultation-right {
+  height: 70vh;
+  width: 52vw;
+  text-align: center;
+  margin-left: 70px;
+}
+.details-section-1,
+.details-section-2,
+.details-section-3 {
+  display: flex;
+  margin: 52px 0 0 220px;
+}
+.details-section-1,
+.details-section-2,
+.details-section-3 img {
+  height: 6vh;
+}
+/* btn section */
+.btn {
+  width: 12vw;
+  margin: 160px 28px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: #2f41e9;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.9rem;
+}
+.btn a{
+    color: #fff;
+}
+.btn:hover {
+  background-color: #1fca66;
+  transform: scale(1.1);
+}

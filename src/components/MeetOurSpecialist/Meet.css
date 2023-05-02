@@ -1,0 +1,12 @@
+.container-meet-specialist{
+    border: 1px solid;
+    height: 35vh;
+    display: flex;
+
+    
+}
+
+.container-meet-specialist .colo{
+    margin-left:6px;
+    color: blue;
+}

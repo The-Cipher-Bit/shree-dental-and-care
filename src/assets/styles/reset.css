@@ -1,7 +1,9 @@
 /* Box-sizing reset */
-*, *::before, *::after {
+ *::before, *::after {
     box-sizing: border-box;
 }
+
+
 
 /* Margin and padding reset */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, figure, dl, dd {
@@ -9,11 +11,7 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, figure, dl, dd {
     padding: 0;
 }
 
-/* Typography reset */
-h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
-    font-weight: normal;
-}
+
 
 ul, ol {
     list-style: none;
@@ -23,16 +21,16 @@ a {
     text-decoration: none;
 }
 
-img {
+/* img {
     display: block;
     max-width: 100%;
     height: auto;
-}
+} */
 
 /* Form element reset */
 input, textarea, select, button {
     margin: 0;
     padding: 0;
-    border: none;
+    all: unset;
     background: transparent;
 }
