@@ -1,4 +1,4 @@
-import './appointment.css'
+import './Appointment.css'
 const Appointment = () => {
   return (
     <div>Appointment</div>
