@@ -6,19 +6,19 @@ const Services = () => {
       title: "Dental Implants",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      imageUrl: "http://localhost:3000/../src/assets/images/hero-teeth.png",
+      imageUrl: "../../src/assets/images/hero-teeth.png",
     },
     {
       title: "Maxillofacial Surgery",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      imageUrl: "http://localhost:3000/../src/assets/images/hero-teeth.png",
+      imageUrl: "../../src/assets/images/hero-teeth.png",
     },
     {
       title: "Endodontics",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      imageUrl: "http://localhost:3000/../src/assets/images/hero-teeth.png",
+      imageUrl: "../../src/assets/images/hero-teeth.png",
     },
   ];
   return (

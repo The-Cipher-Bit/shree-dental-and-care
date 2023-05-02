@@ -3,8 +3,8 @@ import "./Heroslider.css";
 
 const HeroSlider = () => {
   const images = [
-    "http://localhost:3000/../src/assets/images/heroimage-1.png",
-    "http://localhost:3000/../src/assets/images/heroimage-2.jpg",
+    "../../src/assets/images/heroimage-1.png",
+    "../../src/assets/images/heroimage-2.jpg",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
