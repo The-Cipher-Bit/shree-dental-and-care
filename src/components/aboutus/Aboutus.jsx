@@ -1,4 +1,4 @@
-import "./aboutus.css";
+import "./Aboutus.css";
 import Doctor from "../../assets/images/doctor-1.png";
 const Aboutus = () => {
   return (

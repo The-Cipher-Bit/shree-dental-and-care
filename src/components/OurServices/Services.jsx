@@ -1,5 +1,5 @@
 import ServiceCard from "./ServiceCard";
-import "./services.css";
+import "./Services.css";
 const Services = () => {
   const services = [
     {
