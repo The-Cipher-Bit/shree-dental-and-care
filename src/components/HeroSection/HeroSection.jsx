@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./HeroSection.css";
+import "./Herosection.css";
 import logo from "../../assets/images/templogo.png";
 import Heroslider from "./HeroSlider";
 import Teeth from "../../assets/images/hero-teeth.png";

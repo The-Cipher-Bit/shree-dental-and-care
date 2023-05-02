@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./HeroSlider.css";
+import "./Heroslider.css";
 
 const HeroSlider = () => {
   const images = [

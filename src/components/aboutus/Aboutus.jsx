@@ -1,5 +1,5 @@
 import "./Aboutus.css";
-import Doctor from "../../assets/images/doctor-1.png";
+import Doctor from "../../assets/images/doctor.png";
 const Aboutus = () => {
   return (
     <>
