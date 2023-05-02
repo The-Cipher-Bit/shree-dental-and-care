@@ -59,8 +59,7 @@ const HeroSection = () => {
         </div>
         <div className="container-teeth-content">
           <p>
-            We can restore{" "}
-            <span className="teeth-text-color">your dental health issue</span>
+            We can restore <span className="teeth-text-color">your dental health issue</span>
           </p>
         </div>
       </div>

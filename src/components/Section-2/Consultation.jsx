@@ -1,5 +1,5 @@
 import React from "react";
-import "./Consultation.css";
+import "./consultation.css";
 import image from "../../assets/images/hero-teeth.png";
 import imagea from "../../assets/images/image 48.png";
 import imageb from "../../assets/images/image 49.png";
