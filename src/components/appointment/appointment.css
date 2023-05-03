@@ -1,0 +1,22 @@
+.conatiner-appointment-form{
+    display: flex;
+}
+.appointment-left{
+    border: 1px solid;
+    height: 60vh;
+    width: 50vw;
+}
+.form-field{
+margin: 20px 0 0 122px;
+}
+.form-field input{
+    border: 1px solid;
+}
+.appointment-right-form img{
+height: 60vh;
+}
+.conatiner-appointment-form{
+    margin-top: 122px;
+    margin-bottom: 122px;
+    justify-content: center;
+}
