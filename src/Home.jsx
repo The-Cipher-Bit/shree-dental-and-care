@@ -5,6 +5,7 @@ import Meet from "./components/MeetOurSpecialist/Meet";
 import Consultation from "./components/Section-2/Consultation";
 import Makeus from "./components/Section-3/Makeus";
 import Appointment from "./components/Appointment/Appointment";
+import Gallery from "./components/Gallery/Gallery";
 
 const Home = () => {
   const Gradient = ({ children }) => {
@@ -25,9 +26,10 @@ const Home = () => {
         <Services />
       </Gradient>
       <Aboutus />
-      <Consultation></Consultation>
-      <Makeus></Makeus>
-      <Meet></Meet>
+      <Consultation/>
+      <Makeus/>
+      <Meet/>
+      <Gallery/>
       <Appointment />
     </>
   );

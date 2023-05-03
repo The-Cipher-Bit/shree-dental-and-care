@@ -1,0 +1,10 @@
+.main-conatiner-gallery{
+    text-align: center;
+    font-size: 1.8rem;
+}
+  .image-container img {
+    width: 15vw;
+    height: auto;
+  }
+  
+ 
