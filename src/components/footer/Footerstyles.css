@@ -1,0 +1,80 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+.footer_copyright{
+    width: 100%;
+    background-color: black;
+    color: white;
+     text-align: center ;
+     font-size: 0.9rem;
+     padding: 30px ;
+     font-family: lato;
+     
+}
+.footer_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #1A2433;
+    color: white;  
+    height: 406px;  
+    padding: 70px;
+    
+}
+
+.footer_content_contact h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-family: lato;
+}
+.footer_content_socialmedia h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-family: lato;
+    text-align: center;
+}
+.footer_content_socialmedia ul{
+display: flex;
+justify-content: space-between;
+gap: 50px;
+}
+.footer_content_socialmedia a:hover{
+    background-color: #315386;
+    /* transform: scale(1.2); */
+    transition: all 0.5s ease-in-out;
+
+}
+.footer_content_usefullinks h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-family: lato;
+}
+.footer_content_contact p{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: lato;
+    
+}
+.footer_content_socialmedia p{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: lato;
+    
+}
+.footer_content_usefullinks p{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: lato;
+    
+}
+
+.footer_content_usefullinks a{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
