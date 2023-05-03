@@ -1,11 +1,11 @@
-import "./aboutus.css";
-import Doctor from "../../assets/images/doctor-1.png";
+import "./Aboutus.css";
+import Doctor from "../../assets/images/doctor.png";
 const Aboutus = () => {
   return (
     <>
       <div className="container-aboutus" id="about">
         <div className="container-aboutus-left">
-          <h2 className="textcolor_secondary">About <span className="textcolor_primary">Shree Dental</span></h2>
+          <h2 className="title_font textcolor_secondary">About <span className="title_font textcolor_primary">Shree Dental</span></h2>
           <p>
             We are a dedicated dental practice committed to providing
             exceptional care in a friendly and comfortable environment. Our

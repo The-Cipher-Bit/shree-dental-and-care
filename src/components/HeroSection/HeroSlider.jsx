@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import "./HeroSlider.css";
+import "./Heroslider.css";
+import HeroImage1 from "../../assets/images/heroimage-1.png";
+import HeroImage2 from "../../assets/images/heroimage-2.jpg";
 
 const HeroSlider = () => {
   const images = [
-    "http://localhost:3000/../src/assets/images/heroimage-1.png",
-    "http://localhost:3000/../src/assets/images/heroimage-2.jpg",
+    HeroImage1,
+    HeroImage2,
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -46,9 +48,9 @@ const HeroSlider = () => {
         ))}
       </div>
       <div className="hero-slider__content">
-        <h1 className="hero-slider__title">Consult Your</h1>
-        <h1 className="hero-slider__title title__middle">Dental Health</h1>
-        <h1 className="hero-slider__title">Issue</h1>
+        <h1 className="title_font hero-slider__title">Consult Your</h1>
+        <h1 className="title_font hero-slider__title title__middle textcolor_primary">Dental Health</h1>
+        <h1 className="title_font hero-slider__title">Issue</h1>
         <p className="hero-slider__description">
           Smile with confidence
         </p>

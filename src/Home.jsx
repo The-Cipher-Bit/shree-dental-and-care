@@ -2,10 +2,10 @@ import Aboutus from "./components/aboutus/Aboutus";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Services from "./components/OurServices/Services";
 import Meet from "./components/MeetOurSpecialist/Meet";
-import Consultation from "./components/Section-2/Consultation";
-import Makeus from "./components/Section-3/Makeus";
 import Appointment from "./components/Appointment/Appointment";
 import Gallery from "./components/Gallery/Gallery";
+import Consultation from "./components/sectiontwo/Consultation";
+import Makeus from "./components/sectionthree/Makeus";
 
 const Home = () => {
   const Gradient = ({ children }) => {

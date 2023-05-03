@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./herosection.css";
+import "./Herosection.css";
 import logo from "../../assets/images/templogo.png";
 import Heroslider from "./HeroSlider";
 import Teeth from "../../assets/images/hero-teeth.png";
@@ -59,8 +59,7 @@ const HeroSection = () => {
         </div>
         <div className="container-teeth-content">
           <p>
-            We can restore{" "}
-            <span className="teeth-text-color">your dental health issue</span>
+            We can restore <span className="teeth-text-color">your dental health issue</span>
           </p>
         </div>
       </div>

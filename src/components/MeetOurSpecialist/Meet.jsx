@@ -1,6 +1,6 @@
 import "./Meet.css";
 import Meetcard from "./Meetcard";
-import Doctora from "../../assets/images/Doctor-1.png";
+import Doctora from "../../assets/images/doctor.png";
 const specialists = [
   { id: "1", Name: "Dr.Binit Thakurathi", description: "This is testing", image: Doctora },
   { id: "2", Name: "Dr.Jiten Bhattarai", description: "This is testing", image: Doctora },

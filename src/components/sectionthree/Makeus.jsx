@@ -10,21 +10,20 @@ function Makeus() {
             What Makes Us
           </h1>
           <h2 className="textcolor_primary" style={{ fontSize: "2.8rem" }}>
-            {" "}
             More Special
           </h2>
           <ul>
             <li className="verified">
-              lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
+              lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </li>
             <li className="verified">
-              lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
+              lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </li>
             <li className="verified">
-              lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
+              lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </li>
             <li className="verified">
-              lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
+              lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </li>
           </ul>
         </div>
