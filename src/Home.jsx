@@ -2,9 +2,10 @@ import Aboutus from "./components/aboutus/Aboutus";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Services from "./components/OurServices/Services";
 import Meet from "./components/MeetOurSpecialist/Meet";
+import Appointment from "./components/appointment/Appointment";
+import Gallery from "./components/Gallery/Gallery";
 import Consultation from "./components/sectiontwo/Consultation";
 import Makeus from "./components/sectionthree/Makeus";
-import Appointment from "./components/appointment/Appointment";
 
 const Home = () => {
   const Gradient = ({ children }) => {
@@ -25,9 +26,10 @@ const Home = () => {
         <Services />
       </Gradient>
       <Aboutus />
-      <Consultation />
-      <Makeus />
-      <Meet />
+      <Consultation/>
+      <Makeus/>
+      <Meet/>
+      <Gallery/>
       <Appointment />
     </>
   );
