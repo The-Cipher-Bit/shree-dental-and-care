@@ -3,6 +3,8 @@ import "./Herosection.css";
 import logo from "../../assets/images/templogo.png";
 import Heroslider from "./HeroSlider";
 import Teeth from "../../assets/images/hero-teeth.png";
+import Button from "../ButtonComponent/Button";
+
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(()=>{
@@ -52,9 +54,7 @@ const HeroSection = () => {
             </a>
           </li>
         </ul>
-        <div className="booknow-btn">
-          <a href="#booknow">Book Now</a>
-        </div>
+        <Button text="Book Now" padLeft='25px'/>
       </nav>
       <Heroslider />
       <div className="container-teeth">

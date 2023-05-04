@@ -1,11 +1,10 @@
 .container-meet-specialist{
     padding: 50px;
-    margin: 50px 0;
-    display: flex; 
-    justify-content: center;
+    margin: 50px 0px; 
 }
 .container-meet-specialist h2{
     font-size: 2.8rem;
+    text-align: center;
 }
 /* card css */
 
@@ -14,11 +13,12 @@
     width: 19vw;
     border-radius: 12px;
     background-color: #E2EEFA;
-    margin-left: 12px;
     margin-bottom: 12px;
 }
 .container-specialist-image img{
-    height: 270px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .container-specialist{
     text-align: center;
@@ -26,9 +26,8 @@
 /* mapping css */
 .container-meet-mapping{
     display: flex;
-    height: 55vh;
-    justify-content: center;
-    padding: 25px;
-    margin-top: -100px;
-    margin-bottom: 25px;
+    justify-content: space-around;
+    padding: 60px 150px;
+    margin: 40px 0;
+
 }
