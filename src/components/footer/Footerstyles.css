@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-
-  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-
-=======
->>>>>>> ab8856f2aae7151a9206fcb25ac39380bfcf9212
 .footer_copyright{
     width: 100%;
     background-color: black;
     color: white;
      text-align: center ;
      font-size: 0.9rem;
-<<<<<<< HEAD
-     padding: 30px ;
-     font-family: lato;
-     
-=======
      padding: 30px ; 
->>>>>>> ab8856f2aae7151a9206fcb25ac39380bfcf9212
 }
 .footer_content{
     display: flex;
@@ -25,12 +12,7 @@
     justify-content: space-around;
     background: #1A2433;
     color: white;  
-<<<<<<< HEAD
-    height: 406px;  
-    padding: 70px;
-=======
     padding: 100px;
->>>>>>> ab8856f2aae7151a9206fcb25ac39380bfcf9212
     
 }
 
