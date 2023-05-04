@@ -7,6 +7,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Consultation from "./components/sectiontwo/Consultation";
 import Makeus from "./components/sectionthree/Makeus";
 import FooterSection from "./components/footer/Footer";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const Home = () => {
   const Gradient = ({ children }) => {
@@ -32,6 +33,7 @@ const Home = () => {
       <Meet/>
       <Gallery/>
       <Appointment />
+      <ScrollToTop />
       <FooterSection />
     </>
   );
