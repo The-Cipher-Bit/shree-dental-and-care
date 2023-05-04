@@ -6,7 +6,7 @@ const FooterSection = () => {
     <div className="footer_main">
       <div className="footer_content">
         <div className="footer_content_usefullinks">
-          <h2>Useful Links</h2>
+          <h2 className="title_font">Useful Links</h2>
           <ul>
             <li>
               <a href="#">Home</a>
@@ -21,13 +21,13 @@ const FooterSection = () => {
               <a href="#">Consulation</a>
             </li>
             <li>
-              <a href="#">About US</a>
+              <a href="#about">About US</a>
             </li>
             <li></li>
           </ul>
         </div>
         <div className="footer_content_contact">
-          <h2>Contact Us</h2>
+          <h2 className="title_font">Contact Us</h2>
           <p>Chabhil Chowk</p>
 
           <p> Kathmandu ,Nepal </p>
@@ -36,7 +36,7 @@ const FooterSection = () => {
           <p> Web: www.shreedentalandcare.com</p>
         </div>
         <div className="footer_content_socialmedia">
-           <h2>Follow us On</h2>
+           <h2 className="title_font">Follow us On</h2>
            <ul>
             <li><a href=""><FaFacebookSquare color="white" size={20}/></a></li>
             <li><a href=""><FaInstagram color="white" size={20}/></a></li>
