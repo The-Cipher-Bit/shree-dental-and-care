@@ -64,6 +64,7 @@
   left: 25%;
   transform: translate(-50%, -50%);
   z-index: 5;
+  padding:20px;
   width:600px;
   line-height: 30px;
 }
@@ -78,22 +79,6 @@
 
 .title__middle{
   font-size: 4rem;
-}
-
-.hero-slider__btn{
-  margin:20px 0 20px 0;
-   padding: 15px 60px;
-    border-radius: 10px;
-    background-color: #2F41E9;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    color:#fff;
-    font-size: 1.2rem;
-}
-.hero-slider__btn:hover{ 
-  background-color: #1fca66;
-  transform: scale(1.1);
 }
 .hero-slider__description{
   font-size: 1.3rem;

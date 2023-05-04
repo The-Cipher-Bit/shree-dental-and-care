@@ -10,14 +10,15 @@ function Meet() {
   return (
     <>
       <div className="container-meet-specialist">
-        <h2 className="textcolor_secondary">
-          Meet <span className="textcolor_primary">Our Specialist</span>
+        <h2 className="textcolor_secondary title_font">
+          Meet <span className="textcolor_primary title_font">Our Specialist</span>
         </h2>
-      </div>
+      
       <div className="container-meet-mapping">
         {specialists.map((specialista, index) => (
           <Meetcard key={specialista.id} specialista={specialista} />
         ))}
+      </div>
       </div>
     </>
   );

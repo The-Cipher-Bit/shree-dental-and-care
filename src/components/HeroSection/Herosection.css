@@ -18,22 +18,7 @@ nav {
   height: 80px;
 }
 
-.booknow-btn {
-  padding: 15px 30px;
-  border-radius: 10px;
-  background-color: #2f41e9;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
 
-.booknow-btn a {
-  color: white;
-}
-.booknow-btn:hover {
-  background-color: #1fca66;
-  transform: scale(1.1);
-}
 .nav-list {
   display: flex;
   justify-content: space-around;
