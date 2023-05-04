@@ -1,16 +1,23 @@
+<<<<<<< HEAD
 
   @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 
+=======
+>>>>>>> ab8856f2aae7151a9206fcb25ac39380bfcf9212
 .footer_copyright{
     width: 100%;
     background-color: black;
     color: white;
      text-align: center ;
      font-size: 0.9rem;
+<<<<<<< HEAD
      padding: 30px ;
      font-family: lato;
      
+=======
+     padding: 30px ; 
+>>>>>>> ab8856f2aae7151a9206fcb25ac39380bfcf9212
 }
 .footer_content{
     display: flex;
@@ -18,8 +25,12 @@
     justify-content: space-around;
     background: #1A2433;
     color: white;  
+<<<<<<< HEAD
     height: 406px;  
     padding: 70px;
+=======
+    padding: 100px;
+>>>>>>> ab8856f2aae7151a9206fcb25ac39380bfcf9212
     
 }
 
@@ -27,13 +38,11 @@
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 30px;
-    font-family: lato;
 }
 .footer_content_socialmedia h2{
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 30px;
-    font-family: lato;
     text-align: center;
 }
 .footer_content_socialmedia ul{
@@ -41,35 +50,20 @@ display: flex;
 justify-content: space-between;
 gap: 50px;
 }
-.footer_content_socialmedia a:hover{
-    background-color: #315386;
-    /* transform: scale(1.2); */
+.footer_content_socialmedia ul li:hover{
+    transform: scale(1.2);
     transition: all 0.5s ease-in-out;
-
 }
 .footer_content_usefullinks h2{
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 30px;
-    font-family: lato;
+   
 }
-.footer_content_contact p{
+.footer_content_contact p,.footer_content_socialmedia p,.footer_content_usefullinks a{
     font-size: 17px;
     font-weight: 400;
-    font-family: lato;
-    
-}
-.footer_content_socialmedia p{
-    font-size: 17px;
-    font-weight: 400;
-    font-family: lato;
-    
-}
-.footer_content_usefullinks p{
-    font-size: 17px;
-    font-weight: 400;
-    font-family: lato;
-    
+    line-height: 25px;  
 }
 
 .footer_content_usefullinks a{

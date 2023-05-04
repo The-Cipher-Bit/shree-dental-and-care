@@ -1,0 +1,20 @@
+.scroll-to-top_arrow{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    color:#2F41E9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+.scroll-to-top_arrow:hover{
+    color: #36c35c;
+}
+
+
