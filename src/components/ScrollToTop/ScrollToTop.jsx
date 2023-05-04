@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { HiArrowCircleUp } from "react-icons/hi";
-import "./ScrollToTop.css";
+import "./scrolltotop.css";
 
 const ScrollToTop = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
