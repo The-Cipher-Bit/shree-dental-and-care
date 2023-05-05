@@ -5,6 +5,7 @@ function Makeus() {
   return (
     <>
       <div className="container-makeus">
+
         <div className="content-makeus-left">
           <h2 className="textcolor_secondary title_font" style={{ fontSize: "2.8rem" }}>
             What Makes Us
