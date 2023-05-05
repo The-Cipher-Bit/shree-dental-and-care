@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./Heroslider.css";
 import HeroImage1 from "../../assets/images/heroimage-1.png";
 import HeroImage2 from "../../assets/images/heroimage-2.jpg";
+import Button from "../ButtonComponent/Button";
 
 const HeroSlider = () => {
   const images = [
@@ -57,7 +58,7 @@ const HeroSlider = () => {
         <p className="hero-slider__description">
           let us take care of your dental needs
         </p>
-        <button className="hero-slider__btn">Schedule a call</button>
+        <Button text="Schedule a Call" padLeft='60px'/>
       </div>
     </div>
   );

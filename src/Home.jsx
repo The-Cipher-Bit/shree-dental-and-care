@@ -7,6 +7,8 @@ import Gallery from "./components/Gallery/Gallery";
 import Consultation from "./components/sectiontwo/Consultation";
 import Makeus from "./components/sectionthree/Makeus";
 import Review from "./components/Reviews/Review";
+import FooterSection from "./components/footer/Footer";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const Home = () => {
   const Gradient = ({ children }) => {
@@ -33,6 +35,8 @@ const Home = () => {
       <Gallery/>
       <Appointment />
       <Review/>
+      <ScrollToTop />
+      <FooterSection />
     </>
   );
 };

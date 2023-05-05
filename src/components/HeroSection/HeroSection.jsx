@@ -1,18 +1,24 @@
-import { useState } from "react";
+import { useState,useEffect} from "react";
 import "./Herosection.css";
 import logo from "../../assets/images/templogo.png";
 import Heroslider from "./HeroSlider";
 import Teeth from "../../assets/images/hero-teeth.png";
+import Button from "../ButtonComponent/Button";
+
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-  window.addEventListener("scroll", handleScroll);
+  useEffect(()=>{
+    window.addEventListener("scroll",()=>{
+      window.scrollY > 0 ? setScrolled(true) : setScrolled(false);
+    }),[]});
+  // const handleScroll = () => {  
+  //   if (window.scrollY > 0) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  // };
+  // window.addEventListener("scroll", handleScroll);
 
   const linkColor = scrolled ? { color:'black' } : {};
   return (
@@ -48,9 +54,7 @@ const HeroSection = () => {
             </a>
           </li>
         </ul>
-        <div className="booknow-btn">
-          <a href="#booknow">Book Now</a>
-        </div>
+        <Button text="Book Now" padLeft='25px'/>
       </nav>
       <Heroslider />
       <div className="container-teeth">

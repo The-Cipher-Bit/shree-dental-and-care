@@ -6,6 +6,7 @@ import imageb from "../../assets/images/image 49.png";
 import imagec from "../../assets/images/image 50.png";
 
 import Doctor from "../../assets/images/doctor.png";
+import Button from "../ButtonComponent/Button";
 
 const Detail = [
   {
@@ -32,18 +33,19 @@ function Consultation() {
   return (
     <>
       <div className="container-consultation">
-        <div className="image-background">
+        <div className="container-consultation-left">
+         <div className="consultation-image-container">
           <img src={Doctor} alt="Doctor" />
         </div>
         <div className="container-bookappointment">
-          <p style={{ padding: "12px" }}>Dr.Jhon Doe</p>
-          <div className="btn">
-            <a href="#">Book Appointment</a>
-          </div>
+          <p>Dr.Jhon Doe</p>
+          <Button text="Book Appointment" padLeft="25px"/>
         </div>
+        </div>
+       
         <div className="container-consultation-right">
-          <h2 className="textcolor_secondary title_font"  style={{fontSize:'2.8rem'}}>Find Your Right Doctor</h2>
-          <h1 className="textcolor_primary title_font"style={{fontSize:'2.8rem'}}>For Best Consultation</h1>
+          <h2 className="textcolor_secondary title_font" style={{fontSize:'2.8rem'}}>Find Your Right Doctor</h2>
+          <h1 className="textcolor_primary title_font" style={{fontSize:'2.8rem'}}>For Best Consultation</h1>
           <div className="detail-section">
             {Detail.map((details) => (
               <div key={details.id} className={details.className}>
