@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./gallery.css";
-import photoA from "../../assets/images/GalleryA.png";
-import photoB from "../../assets/images/GalleryB.png";
-import photoC from "../../assets/images/GalleryC.png";
+import photoA from "../../assets/images/galleryA.png";
+import photoB from "../../assets/images/galleryB.png";
+import photoC from "../../assets/images/galleryC.png";
 
 const images = [
   { id: 1, src: photoA },
