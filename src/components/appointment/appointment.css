@@ -7,7 +7,6 @@
     display: flex;
     padding: 50px 0px;
     justify-content: center;
-<<<<<<< HEAD:src/components/appointment/Appointment.css
   }
   
   .appointment-left {
@@ -73,6 +72,4 @@
     flex-direction: column;
   }
   
-=======
-}
->>>>>>> f4e70423d6451257aaab5531692eba02f65842d0:src/components/appointment/appointment.css
+
