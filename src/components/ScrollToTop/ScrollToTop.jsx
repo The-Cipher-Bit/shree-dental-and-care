@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {motion, AnimatePresence} from "framer-motion";
 import { HiArrowCircleUp } from "react-icons/hi";
 import "./scrolltotop.css";
 
@@ -13,7 +14,9 @@ const ScrollToTop = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+     return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleScrollToTop = () => {
@@ -24,14 +27,19 @@ const ScrollToTop = () => {
   };
 
   return (
-    <div
-      className={`scroll-to-top_arrow ${
-        showScrollToTop ? "animation_enter" : "animation_leave"
-      }`}
-      onClick={handleScrollToTop}
-    >
-      {showScrollToTop && <HiArrowCircleUp size={50} />}
-    </div>
+    <AnimatePresence>
+      {showScrollToTop && (
+        <motion.div
+          className="scroll-to-top_arrow"
+          initial={{opacity:0,transform: 'translateY(0)'}}
+          animate={{opacity:1, transform: 'translateY(20px)'}}
+          exit={{opacity:0,transform:'translateY(-20px)'}}
+          onClick={handleScrollToTop}
+        >
+          <HiArrowCircleUp size={50} />
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

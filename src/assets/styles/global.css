@@ -1,3 +1,5 @@
+@import-normalize;
+
 *{
     margin: 0;
     padding: 0;
@@ -17,30 +19,3 @@
     font-family: 'Gugi', sans-serif;
 }
 
-/* keyframe animation on display and leave */
-.animation_leave{
-    animation: hide 0.3s ease-in-out forwards;
-}
-.animation_enter{
-    animation: show 0.5s ease-in-out forwards; 
-}
-@keyframes hide{
-    0%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100%{
-        opacity: 0;
-        transform: translateY(20px);
-    }
-}
-@keyframes show{
-    0%{
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}

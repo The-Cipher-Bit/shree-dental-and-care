@@ -4,7 +4,8 @@ import imagec from "../../assets/images/image 41.png";
 function Makeus() {
   return (
     <>
-      
+      <div className="container-makeus">
+
         <div className="content-makeus-left">
           <h2 className="textcolor_secondary title_font" style={{ fontSize: "2.8rem" }}>
             What Makes Us
@@ -30,6 +31,7 @@ function Makeus() {
         <div className="container-makeus-right">
           <img src={imagec} alt="" />
         </div>
+      </div>
     </>
   );
 }

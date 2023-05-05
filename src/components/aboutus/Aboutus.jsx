@@ -1,5 +1,6 @@
 import "./Aboutus.css";
 import Doctor from "../../assets/images/doctor.png";
+import Button from "../ButtonComponent/Button";
 const Aboutus = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const Aboutus = () => {
             unique needs, using the latest technology and techniques. We look
             forward to serving you and your family.
           </p>
+          <Button text="Learn More" />
         </div>
         <div className="container-aboutus-right">
           <img src={Doctor} alt="Doctor1" />
