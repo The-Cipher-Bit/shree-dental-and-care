@@ -1,22 +1,74 @@
-.conatiner-appointment-form{
+.container-main-appointment {
+    margin: 45px 0;
+    text-align: center;
+  }
+  
+  .conatiner-appointment-form {
     display: flex;
-}
-.appointment-left{
-    border: 1px solid;
-    height: 60vh;
-    width: 50vw;
-}
-.form-field{
-margin: 20px 0 0 122px;
-}
-.form-field input{
-    border: 1px solid;
-}
-.appointment-right-form img{
-height: 60vh;
-}
-.conatiner-appointment-form{
-    margin-top: 122px;
-    margin-bottom: 122px;
+    padding: 50px 0px;
     justify-content: center;
-}
+  }
+  
+  .appointment-left {
+    height: 101vh;
+    width: 40%;
+  }
+  
+  .appointment-right {
+    border: 1px solid;
+    width: 502px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+  }
+  
+  
+  .appointment-left img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  form input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 3px;
+  }
+  
+  form input[type="submit"] {
+    background-color: rgb(85, 211, 85);
+    border-radius: 7px;
+    height: 50px;
+    width: 450px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 20px auto;
+  }
+  
+  form input::placeholder {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #a0a0a0;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  

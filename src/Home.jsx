@@ -6,6 +6,7 @@ import Appointment from "./components/appointment/Appointment";
 import Gallery from "./components/Gallery/Gallery";
 import Consultation from "./components/sectiontwo/Consultation";
 import Makeus from "./components/sectionthree/Makeus";
+import Review from "./components/Reviews/Review";
 
 const Home = () => {
   const Gradient = ({ children }) => {
@@ -31,6 +32,7 @@ const Home = () => {
       <Meet/>
       <Gallery/>
       <Appointment />
+      <Review/>
     </>
   );
 };

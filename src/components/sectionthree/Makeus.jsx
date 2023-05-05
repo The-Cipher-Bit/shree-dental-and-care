@@ -6,10 +6,10 @@ function Makeus() {
     <>
       <div className="container-makeus">
         <div className="content-left">
-          <h1 className="textcolor_secondary" style={{ fontSize: "2.8rem" }}>
+          <h1 className="textcolor_secondary title_font" style={{ fontSize: "2.8rem" }}>
             What Makes Us
           </h1>
-          <h2 className="textcolor_primary" style={{ fontSize: "2.8rem" }}>
+          <h2 className="textcolor_primary title_font" style={{ fontSize: "2.8rem" }}>
             More Special
           </h2>
           <ul>
