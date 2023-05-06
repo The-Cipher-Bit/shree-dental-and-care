@@ -17,7 +17,7 @@ const Appointment = () => {
     ev.preventDefault();
     setFetching(true);
     const { fullname, address, age, email, date, message } = formData;
-    const res = await fetch(process.env.VITE_API_ENDPOINT_URL + '/send', {
+    const res = await fetch(`${import.meta.env.VITE_API_ENDPOINT_URL}/send`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
