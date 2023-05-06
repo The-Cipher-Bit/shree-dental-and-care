@@ -9,6 +9,8 @@ import Makeus from "./components/sectionthree/Makeus";
 import Review from "./components/Reviews/Review";
 import FooterSection from "./components/footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Home = () => {
   const Gradient = ({ children }) => {
@@ -22,19 +24,44 @@ const Home = () => {
       </div>
     );
   };
+  const InitialAnimation = ({ children }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref,{once:true});
+    return (
+      <motion.div
+        ref={ref}
+        style={{
+          transform: isInView ? "translateX(0)" : "translateX(-100%)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.8s ease",
+        }}
+      >
+        {children}
+      </motion.div>
+    );
+  };
   return (
     <>
       <Gradient>
         <HeroSection />
         <Services />
       </Gradient>
-      <Aboutus />
-      <Consultation/>
-      <Makeus/>
-      <Meet/>
-      <Gallery/>
-      <Appointment />
-      <Review/>
+      <InitialAnimation>
+        <Aboutus />
+      </InitialAnimation>
+      <Consultation />
+      <InitialAnimation>
+        <Makeus />
+      </InitialAnimation>
+      <Meet />
+
+      <InitialAnimation>
+        <Gallery />
+      </InitialAnimation>
+      <InitialAnimation>
+        <Appointment />
+      </InitialAnimation>
+      <Review />
       <ScrollToTop />
       <FooterSection />
     </>

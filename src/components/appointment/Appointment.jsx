@@ -1,7 +1,10 @@
 import "./appointment.css";
-import { useState } from "react";
-import Rightpic from "../../assets/images/appoint-right.png";
+import { useState,useEffect} from "react";
+import { HiOutlineXCircle } from "react-icons/hi";
 const Appointment = () => {
+  const [response, setResponse] = useState(null);
+  const [fetching, setFetching] = useState(false);
+  const [showResponse, setShowResponse] = useState(false);
   const [formData, setFormData] = useState({
     fullname: "",
     address: "",
@@ -10,19 +13,84 @@ const Appointment = () => {
     date: "",
     message: "",
   });
+  const handleSubmit = async (ev) => {
+    ev.preventDefault();
+    setFetching(true);
+    const { fullname, address, age, email, date, message } = formData;
+    const res = await fetch(`${import.meta.env.VITE_API_ENDPOINT_URL}/send`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullname,
+        address,
+        age,
+        email,
+        date,
+        message,
+      }),
+    });
+    try{
+    const data = await res.json();
+    setFetching(false);
+    if (data.status === '200') {
+      setResponse(data.message);
+      setShowResponse(true);
+      setFormData({
+        fullname: "",
+        address: "",
+        age: "",
+        email: "",
+        date: "",
+        message: "",
+      });
+    } else {
+      setResponse(data.message);
+      setShowResponse(true);
+    }
+    }catch(err){
+      setFetching(false);
+      setResponse('Something went wrong');
+      setShowResponse(true);
+    }
+  
+  };
+ useEffect(()=>{
+    const timer = setTimeout(() => {
+      setShowResponse(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+ },[showResponse]);
+
   return (
     <>
-      <div className="container-main-appointment">
+    { fetching && <div className="loader">
+        <p>Sending mail ...</p>
+    </div>}
+    {
+      !fetching && (
+        <div className="container-main-appointment">
+     
         <h2 className="textcolor_secondary title_font"style={{fontSize:'2.8rem'}}>
           Book an{" "}
           <span className="textcolor_primary title_font" style={{fontSize:'2.8rem'}}>Appointment</span>
-        </h2>
+        </h2> 
+        {showResponse && (
+          <div className="response">
+            <p>{response}</p>
+            <HiOutlineXCircle onClick={() => {
+              setResponse(null)
+              setShowResponse(false)
+              }} />
+          </div>
+        ) }
         <div className="conatiner-appointment-form">
           <div className="appointment-left">
-            <img src={Rightpic} alt="#" />
+            {/* <img src={Rightpic} alt="#" /> */}
           </div>
           <div className="appointment-right">
-            <form action="#" method="get">
+            <form onSubmit={handleSubmit}>
               <div className="form-field">
                 <label htmlFor="Fullname">Full Name</label>
                 <input
@@ -38,7 +106,7 @@ const Appointment = () => {
                 <label htmlFor="address">Address</label>
                 <input
                   type="text"
-                  onChange={(ev) => setFormData({ address: ev.target.value })}
+                  onChange={(ev) => setFormData({...formData, address: ev.target.value })}
                   className="address"
                   value={formData.address}
                 />
@@ -57,6 +125,7 @@ const Appointment = () => {
               <div className="form-field">
                 <label htmlFor="email">Email</label>
                 <input
+                required
                   type="email"
                   className="email"
                   value={formData.email}
@@ -78,7 +147,9 @@ const Appointment = () => {
               </div>
               <div className="form-field">
                 <label htmlFor="message">Consultants Problems</label>
-                <input
+                <textarea
+                  rows={5}
+                  cols={50}
                   type="text"
                   className="message"
                   value={formData.message}
@@ -94,6 +165,9 @@ const Appointment = () => {
           </div>
         </div>
       </div>
+      )
+    }
+      
     </>
   );
 };

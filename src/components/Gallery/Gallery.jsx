@@ -3,6 +3,7 @@ import "./gallery.css";
 import photoA from "../../assets/images/galleryA.png";
 import photoB from "../../assets/images/galleryB.png";
 import photoC from "../../assets/images/galleryC.png";
+import { HiOutlineXCircle } from "react-icons/hi";
 
 const images = [
   { id: 1, src: photoA },
@@ -23,10 +24,10 @@ function Gallery() {
 
   return (
     <>
-      <div className="main-container-gallery">
-        <h3 className="title_font">
+      <div className="main-container-gallery" id="gallery">
+        <h2 className="title_font">
           Our <span className="textcolor_primary title_font">Gallery</span>
-        </h3>
+        </h2>
         <div className="gallery-container">
           {images.map((image, index) => (
             <div
@@ -46,9 +47,7 @@ function Gallery() {
         <div className="modal">
           <div className="modal-content">
             <img src={selectedImage.src} alt={`photo-${selectedImage.id}`} />
-            <button className="close-button" onClick={handleCloseClick}>
-              X
-            </button>
+            <HiOutlineXCircle  className="close-button" onClick={handleCloseClick}/>
           </div>
         </div>
       )}
