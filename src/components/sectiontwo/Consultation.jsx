@@ -1,8 +1,7 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import "./Consultation.css";
 import { RiUserFollowFill, RiTimeFill } from "react-icons/ri";
-import image from "../../assets/images/hero-teeth.png";
 import imagea from "../../assets/images/image 48.png";
 import imageb from "../../assets/images/image 49.png";
 import imagec from "../../assets/images/image 50.png";
@@ -45,7 +44,7 @@ function Consultation() {
   const [activeDoctor, setActiveDoctor] = useState(details[0]);
   const sectionVariants = {
     initial: {
-      x: "-100%",
+      x:  '-100%',
       opacity: 0,
     },
     animate: {
@@ -55,23 +54,16 @@ function Consultation() {
         duration: 0.5,
       },
     },
-    exit: {
-      x: "100%",
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
+   
   };
   return (
     <>
-      <AnimatePresence>
         <motion.div
           key={activeDoctor.id}
           variants={sectionVariants}
           initial="initial"
           animate="animate"
-          exit="exit"
+          id="consult"
         >
           <div className="container-consultation">
             <div className="container-consultation-left">
@@ -145,7 +137,6 @@ function Consultation() {
             </div>
           </div>
         </motion.div>
-      </AnimatePresence>
     </>
   );
 }

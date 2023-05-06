@@ -1,8 +1,12 @@
 .main-container-gallery {
     margin: 20px;
   }
-  
+  .main-container-gallery h2{
+    font-size: 2.8rem;
+    text-align: center;
+  }
   .gallery-container {
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -44,10 +48,9 @@
     position: absolute;
     top: 12px;
     right: 12px;
-    background-color: transparent;
-    color: rgb(226, 74, 74);
-    font-size: 30px;
-    border: none;
+    
+    color: rgb(87, 94, 217);
+    font-size: 40px;
     cursor: pointer;
   }
   
