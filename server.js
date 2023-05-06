@@ -5,7 +5,7 @@ import { config } from "dotenv";
 config();
 // middleware
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3002;
 app.use(express.json());
 app.use(cors());
 
@@ -59,13 +59,6 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 //       : console.log(`=== Server is ready to take messages: ${success} ===`);
 //   });
 
-  
-    // transporter.sendMail(mailOptions, function (err, data) {
-    //   if (err) {
-    //     console.log("Error " + err);
-    //   } else {
-    //     console.log("Email sent successfully");
-    //   }
-    // });
+
 
     //curl -d -url http://localhost:3001/send
