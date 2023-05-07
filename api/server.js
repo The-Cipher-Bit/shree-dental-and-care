@@ -1,6 +1,7 @@
 import express from "express";
 import nodemailer from "nodemailer";
 import cors from "cors";
+import bodyParser from "body-parser";
 import { config } from "dotenv";
 config();
 
@@ -8,6 +9,7 @@ config();
 const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const corsOptions = {
   origin: "https://shree-dental-and-care.vercel.app/",
@@ -47,7 +49,7 @@ app.post("/send", async (req, res) => {
   try {
     const result = await transporter.sendMail(mailOptions);
     console.log("Email sent");
-    res.json({ status: "success", message: "Email sent" });
+    res.status(200).send({ message: "Email sent", status: "200" });
   } catch (error) {
     console.error(error);
     res.status(500).send(error.message);
