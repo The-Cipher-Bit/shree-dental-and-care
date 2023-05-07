@@ -8,10 +8,8 @@ const app = express();
 const port = process.env.PORT || 3002;
 app.use(express.json());
 app.use(cors());
+app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
 
 app.post("/send", async (req, res) => {
   config();
