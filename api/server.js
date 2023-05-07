@@ -7,7 +7,12 @@ config();
 const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: "https://shree-dental-and-care.vercel.app/",
+  methods: ["GET", "POST"],
+};
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 
 
