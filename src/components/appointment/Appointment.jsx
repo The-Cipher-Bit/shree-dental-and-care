@@ -20,8 +20,9 @@ const Appointment = () => {
     const res = await fetch(`${import.meta.env.VITE_API_ENDPOINT_URL}/send`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-      },
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
       body: JSON.stringify({
         fullname,
         address,
