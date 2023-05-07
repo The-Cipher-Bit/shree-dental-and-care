@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "^/send$", "destination": "/index.js", "methods": ["POST"] }
+    { "source": "^/send$", "destination": "/index.js" }
   ]
 }
