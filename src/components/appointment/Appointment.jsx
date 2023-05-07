@@ -17,12 +17,12 @@ const Appointment = () => {
     ev.preventDefault();
     setFetching(true);
     const { fullname, address, age, email, date, message } = formData;
-    const res = await fetch("https://shree-dental-and-care.vercel.app/api/send", {
+    const res = await fetch(`${import.meta.env.VITE_API_ENDPOINT_URL}/api/send`, {
       method: "POST",
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
       body: JSON.stringify({
         fullname,
         address,
