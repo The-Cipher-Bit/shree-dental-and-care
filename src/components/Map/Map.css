@@ -1,0 +1,42 @@
+.container-map {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .container-map-left {
+    width: 100%;
+    max-width: 650px;
+    margin: 12px 0px 65px 0;
+  }
+  
+  .container-map-right {
+    width: 100%;
+    max-width: 28vw;
+    height: 56vh;
+    margin: 22px auto;
+    background-color: #D4DEFF;
+    border-radius: 9px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  }
+  
+  .container-main-heading {
+    text-align: center;
+  }
+  
+  .map-content-feild {
+    display: flex;
+    margin-top: 18px;
+    justify-content: space-around;
+  }
+  
+  .map-content-feild img {
+    margin-top: 11px;
+    height: 7vh;
+  }
+  
+  .content-feild {
+    justify-content: center;
+    width: 60%;
+  }
+  

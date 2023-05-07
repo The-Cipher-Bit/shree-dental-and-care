@@ -9,6 +9,7 @@ import Makeus from "./components/sectionthree/Makeus";
 import Review from "./components/Reviews/Review";
 import FooterSection from "./components/footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Map from "./components/Map/Map";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -62,6 +63,7 @@ const Home = () => {
         <Appointment />
       </InitialAnimation>
       <Review />
+      <Map/>
       <ScrollToTop />
       <FooterSection />
     </>

@@ -10,10 +10,10 @@
   background-color: #E0ECFF;
   height: 35vh;
   width: 45vw;
-  margin: 25px auto;
+  margin: 25px 50px;
   border-radius: 12px;
   border-left: 8px solid blue;
-   padding: 50px;
+   padding: 20px;
 }
 
 .container-reviewmessage{

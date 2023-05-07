@@ -9,9 +9,10 @@
     margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 5px;
+
   }
-  
+
   .image-container {
     position: relative;
   }
@@ -22,7 +23,6 @@
   
   .image-container img {
     width: 100%;
-    
   }
   
   .modal {
@@ -43,14 +43,19 @@
     max-width: 50%;
     max-height: 60%;
   }
-  
+  .modal-content img{
+    height: 68vh;
+    width: auto;
+  }
   .close-button {
     position: absolute;
     top: 12px;
     right: 12px;
-    
-    color: rgb(87, 94, 217);
-    font-size: 40px;
+    background-color: transparent;
+    color: rgb(77, 69, 232);
+    font-size: 30px;
+    border-radius: 7px;
+    width: 3vw;
     cursor: pointer;
   }
   
