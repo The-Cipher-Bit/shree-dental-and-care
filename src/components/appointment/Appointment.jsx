@@ -160,7 +160,7 @@ const Appointment = () => {
                 />
               </div>
               <div className="form-field">
-                <input type="submit" />
+                <input type="submit" value="send"/>
               </div>
             </form>
           </div>
