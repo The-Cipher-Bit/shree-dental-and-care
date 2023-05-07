@@ -16,24 +16,16 @@ const Appointment = () => {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     setFetching(true);
-    const { fullname, address, age, email, date, message } = formData;
     const res = await fetch(`/api/send`, {
       method: "POST",
       headers: {
-            Accept: 'application/json',
             'Content-Type': 'application/json',
         },
-      body: JSON.stringify({
-        fullname,
-        address,
-        age,
-        email,
-        date,
-        message,
-      }),
+      body: JSON.stringify({formData}),
     });
     try{
     const data = await res.json();
+    console.log(data);
     setFetching(false);
     if (data.status === '200') {
       setResponse(data.message);
