@@ -1,10 +1,76 @@
+
 .container-main-appointment {
-    margin: 45px 0;
-    text-align: center;
-  }
-  
-  .conatiner-appointment-form {
-    display: flex;
-    padding: 50px 0px;
-    justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  padding: 50px;
 }
+.conatiner-appointment-form{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.response {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.response p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 2rem;
+}
+
+.response svg {
+  font-size: 2.5rem;
+  color: #0ef03f;
+  cursor: pointer;
+}
+
+.form-field label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="number"],
+.form-field input[type="date"],
+.form-field textarea {
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-field input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-field input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+

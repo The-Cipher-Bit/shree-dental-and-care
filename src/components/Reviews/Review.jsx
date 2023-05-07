@@ -1,6 +1,6 @@
 import "./Review.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Autoplay } from "swiper";
+import SwiperCore, { Autoplay, Pagination } from "swiper/core";
 import "swiper/swiper.min.css";
 import imageA from "../../assets/images/profile.jpg";
 import imageB from "../../assets/images/GallC.jpg";
@@ -13,46 +13,54 @@ const Slider = [
     image: imageA,
     message:
       "The staff was friendly and welcoming, making me feel comfortable from the moment I walked in",
-    Name: "Chandra Shah",
+    name: "Chandra Shah",
+    rating: 5,
   },
   {
     id: 2,
     image: imageB,
     message:
       "The salon was clean and well-maintained, and the service was excellent",
-    Name: "Rita Patel",
+    name: "Rita Patel",
+    rating: 4,
   },
   {
     id: 3,
     image: imageC,
     message:
       "I loved my new haircut! The stylist was very talented and listened to what I wanted",
-    Name: "Sara Lee",
+    name: "Sara Lee",
+    rating: 3,
   },
   {
     id: 4,
     image: imageD,
     message:
       "The prices are very reasonable for the quality of service you receive",
-    Name: "Tom Smith",
+    name: "Tom Smith",
+    rating: 2,
   },
   {
     id: 5,
     image: imageA,
     message:
       "I would highly recommend this salon to anyone looking for a great haircut and friendly service",
-    Name: "John Doe",
+    name: "John Doe",
+    rating: 1,
   },
 ];
-
-SwiperCore.use([Pagination, Autoplay]);
+SwiperCore.use([Autoplay, Pagination]); // SwiperCore is a global object exported by Swiper which includes all components and methods.
 function Review() {
   return (
     <>
       <div className="main-container-review">
         <div className="container-review-heading">
-          <h3 className="title_font">What Our <span className="textcolor_primary title_font">Client Says About Us</span></h3>
-        
+          <h2 className="title_font">
+            What Our{" "}
+            <span className="textcolor_primary title_font">
+              Client Says About Us
+            </span>
+          </h2>
         </div>
         <Swiper
           slidesPerView={2}
@@ -66,76 +74,32 @@ function Review() {
             disableOnInteraction: false,
           }}
         >
-          <SwiperSlide>
-            <div className="container-client-message">
-              <div className="container-message">
-                <p>{Slider[0].message}</p>
-                <span className="rating">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </span>
-              </div>
-              <div className="container-customer-info">
-                <img src={Slider[0].image} alt="image" />
-                <h3>{Slider[0].Name}</h3>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="container-client-message">
-              <div className="container-message">
-                <p>{Slider[1].message}</p>
-                <span className="rating">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </span>
-              </div>
-              <div className="container-customer-info">
-                <img src={Slider[1].image} alt="image" />
-                <h3>{Slider[1].Name}</h3>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="container-client-message">
-              <div className="container-message">
-                <p>{Slider[2].message}</p>
-                <span className="rating">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </span>
-              </div>
-              <div className="container-customer-info">
-                <img src={Slider[2].image} alt="image" />
-                <h3>{Slider[2].Name}</h3>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="container-client-message">
-              <div className="container-message">
-                <p>{Slider[3].message}</p>
-                <span className="rating">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </span>
-              </div>
-              <div className="container-customer-info">
-                <img src={Slider[3].image} alt="image" />
-                <h3>{Slider[3].Name}</h3>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="container-client-message">
-              <div className="container-message">
-                <p>{Slider[4].message}</p>
-                <span className="rating">
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </span>
-              </div>
-              <div className="container-customer-info">
-                <img src={Slider[4].image} alt="image" />
-                <h3>{Slider[4].Name}</h3>
-              </div>
-            </div>
-          </SwiperSlide>
+            {Slider.map((slide, index) => {
+              const stars = [];
+              for (let i = 1; i <= slide.rating; i++) {
+                stars.push(<span key={i}>&#9733;</span>);
+              }
+              for (let i = slide.rating + 1; i <= 5; i++) {
+                stars.push(<span key={i}>&#9734;</span>);
+              }
+              return (
+                <SwiperSlide key={index}>
+                  <div className="container-client-message">
+                    <div className="container-reviewmessage">
+                      <p>&#128483;{"  "}" {slide.message} "</p>
+                      <p className="rating">{stars}</p>
+                    </div>
+                    <div className="container-customer-info">
+                      <img src={slide.image} alt="image" />
+                      <div className="container-customer-info_name">
+                        <h3>{slide.name}</h3>
+                        <p>patient</p>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
       </div>
     </>

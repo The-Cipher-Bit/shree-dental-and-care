@@ -1,12 +1,12 @@
 .main-container-gallery {
     margin: 20px;
   }
-  .conatiner-title{
-    text-align: center;
+  .main-container-gallery h2{
     font-size: 2.8rem;
-    margin-bottom: 42px;
+    text-align: center;
   }
   .gallery-container {
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
@@ -52,10 +52,9 @@
     top: 12px;
     right: 12px;
     background-color: transparent;
-    color: rgb(242, 242, 242);
+    color: rgb(77, 69, 232);
     font-size: 30px;
     border-radius: 7px;
-    background-color: red;
     width: 3vw;
     cursor: pointer;
   }
