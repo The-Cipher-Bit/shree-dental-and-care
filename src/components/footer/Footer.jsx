@@ -48,7 +48,7 @@ const FooterSection = () => {
       <div className="footer_copyright">
         <p>
           Copyright &copy; 2023 Shree Dental Care Pvt Ltd . All Right Reserved |
-          Design by Thecipherbit
+          Design by   <a href="https://thecipherbit.me/" style={{color:'green'}}>Thecipherbit</a>
         </p>
       </div>
     </div>

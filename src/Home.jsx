@@ -9,6 +9,7 @@ import Makeus from "./components/sectionthree/Makeus";
 import Review from "./components/Reviews/Review";
 import FooterSection from "./components/footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Map from "./components/Map/Map";
 
 const Home = () => {
   const Gradient = ({ children }) => {
@@ -34,6 +35,7 @@ const Home = () => {
       <Meet/>
       <Gallery/>
       <Appointment />
+      <Map/>
       <Review/>
       <ScrollToTop />
       <FooterSection />

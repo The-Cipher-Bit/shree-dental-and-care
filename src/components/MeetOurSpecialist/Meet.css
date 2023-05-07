@@ -27,7 +27,52 @@
 .container-meet-mapping{
     display: flex;
     justify-content: space-around;
-    padding: 60px 150px;
-    margin: 40px 0;
+    padding: 40px 150px;
+    margin: 3px 0;
 
 }
+/* Media Queries */
+@media (max-width: 768px) {
+    .container-meet-specialist {
+      padding: 30px;
+      margin: 30px 0;
+    }
+  
+    .container-meet-specialist h2 {
+      font-size: 2rem;
+    }
+  
+    .container-specialist-image {
+      height: auto;
+      width: 80%;
+      margin: 0 auto 12px;
+    }
+  
+    .container-specialist-image img {
+      border-radius: 8px;
+    }
+  
+    .container-meet-mapping {
+      flex-wrap: wrap;
+      padding: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container-meet-specialist {
+      padding: 20px;
+      margin: 20px 0;
+    }
+  
+    .container-meet-specialist h2 {
+      font-size: 1.8rem;
+    }
+  
+    .container-specialist-image {
+      width: 100%;
+    }
+  
+    .container-meet-mapping {
+      padding: 20px;
+    }
+  }

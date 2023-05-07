@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./gallery.css";
-import photoA from "../../assets/images/galleryA.png";
-import photoB from "../../assets/images/galleryB.png";
-import photoC from "../../assets/images/galleryC.png";
+import photoA from "../../assets/images/doctor.png";
+import photoB from "../../assets/images/GallC.jpg";
+import photoC from "../../assets/images/GallE.jpg";
 
 const images = [
   { id: 1, src: photoA },
@@ -23,10 +23,12 @@ function Gallery() {
 
   return (
     <>
-      <div className="main-container-gallery">
+      <div className="conatiner-title">
         <h3 className="title_font">
           Our <span className="textcolor_primary title_font">Gallery</span>
         </h3>
+      </div>
+      <div className="main-container-gallery">
         <div className="gallery-container">
           {images.map((image, index) => (
             <div
