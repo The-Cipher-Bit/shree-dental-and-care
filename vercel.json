@@ -1,1 +1,5 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+  "rewrites": [
+    { "source": "^/send$", "method": "POST", "destination": "/index.js" }
+  ]
+}
