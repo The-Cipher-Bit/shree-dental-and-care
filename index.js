@@ -10,7 +10,7 @@ app.use(cors());
 
 
 
-app.post("/send", async (req, res) => {
+app.post("send", async (req, res) => {
   config();
   const { fullname, address, age, email, date, message } = req.body;
   const transporter = nodemailer.createTransport({
