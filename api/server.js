@@ -16,7 +16,6 @@ const corsOptions = {
   methods: ["GET", "POST"],
 };
 app.use(cors(corsOptions));
-app.use(express.urlencoded({ extended: false }));
 
 app.post("/send", async (req, res) => {
   const { fullname, address, age, email, date, message } = req.body;
@@ -48,11 +47,11 @@ app.post("/send", async (req, res) => {
 
   try {
     const result = await transporter.sendMail(mailOptions);
-    console.log("Email sent");
-    res.status(200).send({ message: "Email sent", status: "200" });
+     res.status(200).json({ message: "Email sent", status: "200" });
   } catch (error) {
-    console.error(error);
-    res.status(500).send(error.message);
+    res
+      .status(500)
+      .json({ message: "Error sending email", error: error.message });
   }
 });
 
