@@ -16,6 +16,7 @@ const Appointment = () => {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     setFetching(true);
+    //here /api/send is used as vercel.json has routes for /api/send to be redirected to api/server.js
     const res = await fetch(`/api/send`, {
       method: "POST",
       headers: {
