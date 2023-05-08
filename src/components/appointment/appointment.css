@@ -1,14 +1,18 @@
 
 .container-main-appointment {
   margin-top: 150px;
-  margin-bottom: 150px;
-  padding: 50px;
+  margin-bottom: 100px;
+  /* padding: 50px; */
+}
+.container-main-appointment > h2{
+  text-align: center;
 }
 .conatiner-appointment-form{
+  display: flex;
+  justify-content: space-around;
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 50px;
-  border: 1px solid #ccc;
   border-radius: 5px;
 }
 .form-field {
@@ -19,7 +23,7 @@
 .response {
   position: fixed;
   top: 10%;
-  left: 50%;
+  left: 30%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -31,22 +35,55 @@
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   z-index: 9999;
 }
-
+.appointment-right{
+  width: 40%;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+.appointment-left{
+  width: 50%;
+  padding-top: 150px;
+}
+.appointment-left p{
+  font-size: 1.2rem;
+ text-align: center;
+  font-weight: 500;
+  margin-bottom: 1rem;
+    background: linear-gradient(90deg, rgba(46,236,25,1) 0%, rgba(47,65,233,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ /* color:linear-gradient(90deg, rgba(46,236,25,1) 0%, rgba(47,65,233,1) 100%); */
+}
+.appointment-left-animation{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.appointment-left-animation-arrow{
+  position: absolute;
+  top:35%;
+  left:320px;
+  color:#188de6;
+  font-size: 3rem;
+} 
 .response p {
   font-size: 1.2rem;
   font-weight: 600;
   margin-right: 2rem;
+  background: linear-gradient(90deg, rgba(46,236,25,1) 0%, rgba(47,65,233,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .response svg {
   font-size: 2.5rem;
-  color: #0ef03f;
+  color: #188de6;
   cursor: pointer;
 }
 
 .form-field label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
 }
 
 .form-field input[type="text"],
@@ -57,13 +94,17 @@
   padding: 0.5rem;
   border: none;
   border-bottom: 2px solid #ccc;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
-
+input:focus,textarea:focus{
+  outline: none;
+  border-color: blue; 
+  box-shadow: 0 0 3px blue; 
+}
 .form-field input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #2F41E9;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -71,6 +112,24 @@
 }
 
 .form-field input[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #31bb36;
 }
 
+.loader-for-mail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-height: 60vh;
+
+}
+.loader-for-mail p{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}

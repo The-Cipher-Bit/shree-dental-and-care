@@ -13,6 +13,7 @@ import Map from "./components/Map/Map";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+
 const Home = () => {
   const Gradient = ({ children }) => {
     return (
@@ -63,9 +64,10 @@ const Home = () => {
         <Appointment />
       </InitialAnimation>
       <Review />
-      <Map/>
+      <Map/> 
       <ScrollToTop />
       <FooterSection />
+     
     </>
   );
 };
