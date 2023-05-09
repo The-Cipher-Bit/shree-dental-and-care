@@ -15,21 +15,24 @@
 }
 .content-makeus-left ul{
   margin-top: 50px;
+  margin-left: 180px;
 }
 /* tick mark */
 .verified {
     position: relative;
     padding-left: 35px;
     margin-top: 15px;
+    text-align: left;
   }
   
   .verified::before {
     content: "";
     position: absolute;
-    left: 80px;
     top: 0;
+    left:-10px;
     width: 20px;
     height: 20px;
+    margin-left: 20px;
     background-image: url("../../assets/images/verified.png");
     background-repeat: no-repeat;
     background-position: center;

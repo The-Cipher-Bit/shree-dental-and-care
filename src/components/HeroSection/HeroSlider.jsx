@@ -50,15 +50,15 @@ const HeroSlider = () => {
       </div>
       <div className="hero-slider__content">
         <h1 className="title_font hero-slider__title">Consult Your</h1>
-        <h1 className="title_font hero-slider__title title__middle textcolor_primary">Dental Health</h1>
+        <h1 className="title_font hero-slider__title title__middle textcolor_primary">
+          Dental Health
+        </h1>
         <h1 className="title_font hero-slider__title">Issue</h1>
-        <p className="hero-slider__description">
-          Smile with confidence
-        </p>
+        <p className="hero-slider__description">Smile with confidence</p>
         <p className="hero-slider__description">
           let us take care of your dental needs
         </p>
-        <Button text="Schedule a Call" padLeft='60px'/>
+        <Button text="Start your smile journey" url="#appointment" padLeft="60px" />
       </div>
     </div>
   );
