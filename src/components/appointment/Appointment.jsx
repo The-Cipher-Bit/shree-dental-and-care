@@ -1,15 +1,14 @@
 import "./appointment.css";
-import { useState,useEffect} from "react";
+import { useState, useEffect } from "react";
 import { HiOutlineXCircle } from "react-icons/hi";
 import DotLoader from "react-spinners/DotLoader";
 import * as LottiePlayer from "@lottiefiles/lottie-player";
 import { HiArrowSmRight } from "react-icons/hi";
-
+import { RiCheckboxCircleLine, RiCloseCircleLine } from "react-icons/ri";
 
 const Appointment = () => {
   const [response, setResponse] = useState(null);
   const [fetching, setFetching] = useState(false);
-  const [showResponse, setShowResponse] = useState(false);
   const [formData, setFormData] = useState({
     fullname: "",
     address: "",
@@ -17,6 +16,7 @@ const Appointment = () => {
     email: "",
     date: "",
     message: "",
+    phone: "",
   });
   const handleSubmit = async (ev) => {
     ev.preventDefault();
@@ -25,48 +25,69 @@ const Appointment = () => {
     const res = await fetch(`/api/send`, {
       method: "POST",
       headers: {
-            'Content-Type': 'application/json',
-        },
-      body: JSON.stringify({formData}),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ formData }),
     });
-    try{
-    const data = await res.json();
-    setFetching(false);
-    if (res.status === 200) {
-      setResponse(data.message);
-      setShowResponse(true);
-      setFormData({
-        fullname: "",
-        address: "",
-        age: "",
-        email: "",
-        date: "",
-        message: "",
-      });
-    } else {
-      setResponse(data.message);
-      setShowResponse(true);
-    }
-    }catch(err){
+    try {
+      const data = await res.json();
+      setFetching(false);
+      if (res.status === 200) {
+        setResponse(data.message);
+        setFormData({
+          fullname: "",
+          address: "",
+          age: "",
+          email: "",
+          phone: "",
+          date: "",
+          message: "",
+        });
+      } else {
+        setResponse(data.message);
+      }
+    } catch (err) {
       console.log(err);
       setFetching(false);
-      setResponse('Something went wrong');
-      setShowResponse(true);
+      setResponse("Something went wrong");
     }
-  
   };
   const currentDate = new Date().toISOString().split("T")[0];
- useEffect(()=>{
+  useEffect(() => {
     const timer = setTimeout(() => {
-      setShowResponse(false);
-    }, 5000);
+      setResponse(null);
+    }, 10000);
     return () => clearTimeout(timer);
- },[showResponse]);
+  }, [response]);
 
+  if(response !== null && response === "success"){
+    const html_snnipet = (
+      <>
+        <div className="response_icon_success">
+          <RiCheckboxCircleLine />
+        </div>
+        <div className="response_info_success">
+          <h2 className="title_font">Mail Sent!</h2>
+          <p>We will contact you soon. Thank you!</p>
+        </div>
+      </>
+    );
+   } else if(response !== null && response === "fail"){
+     const html_snnipet = (
+      <>
+      <div className="response_icon_fail">
+                <RiCloseCircleLine />
+              </div>
+              <div className="response_info_fail">
+                <h2 className="title_font">Mail Not Sent!</h2>
+                <p>Something went wrong. Please try again later.</p>
+              </div>
+            </>
+   )}
 
   return (
     <>
-      <div className="container-main-appointment">
+      <div className="container-main-appointment" id="appointment">
         <h2
           className="textcolor_secondary title_font"
           style={{ fontSize: "2.8rem" }}
@@ -79,21 +100,44 @@ const Appointment = () => {
             Appointment
           </span>
         </h2>
-        {showResponse && (
-          <div className="response">
-            <p>{response}</p>
-            <HiOutlineXCircle
-              onClick={() => {
-                setResponse(null);
-                setShowResponse(false);
-              }}
-            />
+        {response && (
+          <div className="response_info_container">
+            {console.log(response)}
+            {response === "success" ? (
+                <>
+                  <div className="response_icon_success">
+                    <RiCheckboxCircleLine />
+                  </div>
+                  <div className="response_info_success">
+                    <h2 className="title_font">Mail Sent!</h2>
+                    <p>We will contact you soon. Thank you!</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="response_icon_fail">
+                    <RiCloseCircleLine />
+                  </div>
+                  <div className="response_info_fail">
+                    <h2 className="title_font">Mail Not Sent!</h2>
+                    <p>Something went wrong. Please try again later.</p>
+                  </div>
+                </>
+              )}
+            <div className="response_close_button">
+              <HiOutlineXCircle
+                onClick={() => {
+                  setResponse(null);
+                  setShowResponse(false);
+                }}
+              />
+            </div>
           </div>
         )}
         {fetching && (
           <div className="loader-for-mail">
             <DotLoader color="#0d6efd" />
-            <p>Sending mail</p>
+            <p>Sending mail ... Please wait a few seconds </p>
           </div>
         )}
         {!fetching && (
@@ -150,11 +194,25 @@ const Appointment = () => {
                   <label htmlFor="age">Age</label>
                   <input
                     type="number"
+                    min={1}
                     className="age"
                     onChange={(ev) =>
                       setFormData({ ...formData, age: ev.target.value })
                     }
                     value={formData.age}
+                  />
+                </div>
+                <div className="form-field">
+                  <label htmlFor="phone">Contact Number</label>
+                  <input
+                    type="tel"
+                    minLength={10}
+                    maxLength={25}
+                    className="age"
+                    onChange={(ev) =>
+                      setFormData({ ...formData, phone: ev.target.value })
+                    }
+                    value={formData.phone}
                   />
                 </div>
                 <div className="form-field">

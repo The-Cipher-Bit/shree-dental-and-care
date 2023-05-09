@@ -2,7 +2,10 @@
 import nodemailer from "nodemailer";
 //dotenv for accessing environment variables
 import { config } from "dotenv";
+import path from "path";
+const __dirname = path.resolve();
 config();
+
 
 
 
@@ -19,18 +22,79 @@ config();
  });
 
 
-async function sendEmail({ fullname, address, age, email, date, message }) {
+async function sendEmail({ fullname, address, age, email, date, message,phone }) {
    const mailOptions = {
      from: `"${fullname}" <${email}>`,
      to: process.env.EMAIL,
-     subject: "New Message from Contact Form",
-     html: `<p>You have a new message from the contact form on your website.</p>
-    <p><strong>Name: </strong> ${fullname}</p>
-    <p><strong>Address: </strong> ${address}</p>
-    <p><strong>Age: </strong> ${age}</p>
-    <p><strong>Email Address: </strong> ${email}</p>
-    <p><strong>Date: </strong> ${date}</p>
-    <p><strong>Message: </strong> ${message}</p>`,
+     subject: "New Appointment mail from shree dental website",
+     html: `<html>
+        <head>
+          <style>
+            /* Styles for the email body */
+            body {
+              background-color: #f5f5f5;
+              font-family: Arial, sans-serif;
+              color: #333333;
+              padding: 20px;
+            }
+            .email-container {
+              background-color: #ffffff;
+              border-radius: 10px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              padding: 30px;
+            }
+            .email-header {
+              color: #1c7cd6;
+              font-size: 24px;
+              margin-bottom: 20px;
+            }
+            .email-field {
+              font-size: 16px;
+              line-height: 1.5;
+              margin-bottom: 10px;
+            }
+            .email-label {
+              display: inline-block;
+              width: 150px;
+              font-weight: bold;
+            }
+            .email-message {
+              font-size: 16px;
+              line-height: 1.5;
+              margin-bottom: 0;
+            }
+            .logo-container {
+              text-align: center;
+              margin-bottom: 20px;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="email-container">
+          <div class="logo-container">
+
+            <img src="cid:logo" alt="logo" />
+          </div>
+            <h1 class="email-header">New Appointment mail from ${fullname}</h1>
+            <hr>
+            <p class="email-field"><span class="email-label">Name:</span> ${fullname}</p>
+            <p class="email-field"><span class="email-label">Address:</span> ${address}</p>
+            <p class="email-field"><span class="email-label">Age:</span> ${age}</p>
+            <p class="email-field"><span class="email-label">Client contact number:</span> ${phone}</p>
+            <p class="email-field"><span class="email-label">Email Address:</span> ${email}</p>
+            <p class="email-field"><span class="email-label">Choosen Date by client:</span> ${date}</p>
+            <p class="email-field"><span class="email-label">Message:</span></p>
+            <p class="email-message">${message}</p>
+          </div>
+        </body>
+      </html>`,
+     attachments: [
+       {
+         filename: "templogo.png",
+         path: __dirname + "/src/assets/images/templogo.png",
+         cid: "logo", //same cid value as in the html img src
+       },
+     ],
    };
 
 
@@ -41,13 +105,13 @@ export default async function handler(req, res) {
     // console.log(req.body.formData);
     const emailRes = await sendEmail(req.body.formData);
     if (emailRes.messageId) {
-      return res.status(200).json({ message: `Email sent successfuly` });
+      return res.status(200).json({ message: 'success' });
     }
 
-    return res.status(400).json({ message: 'Error sending email' });
+    return res.status(400).json({ message: 'fail' });
   }
 
-  return res.status(400).json({ message: `Incorrect method: ${req.method}. Did you mean POST?` });
+  return res.status(400).json({ message: `fail` });
 }
 
 
