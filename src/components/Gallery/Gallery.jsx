@@ -20,8 +20,8 @@ const images = [
 
 const breakpointColumnsObj = {
   default: 3,
-  700: 2,
-  500: 1,
+  800: 2,
+  480: 1,
 };
 
 function Gallery() {
@@ -56,7 +56,7 @@ function Gallery() {
             <div
               className={`image-container ${index === 0 ? "large-image" : ""} ${
                 index === 1 || index === 3 ? "masonry-item--lower" : ""
-              }`}
+              } ${index === 4 ? "special-image" : ""}`}
               key={image.id}
             >
               <img
