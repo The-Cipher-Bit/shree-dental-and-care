@@ -13,7 +13,6 @@ import Map from "./components/Map/Map";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-
 const Home = () => {
   const Gradient = ({ children }) => {
     return (
@@ -28,7 +27,7 @@ const Home = () => {
   };
   const InitialAnimation = ({ children }) => {
     const ref = useRef(null);
-    const isInView = useInView(ref,{once:true});
+    const isInView = useInView(ref, { once: true });
     return (
       <motion.div
         ref={ref}
@@ -43,7 +42,7 @@ const Home = () => {
     );
   };
   return (
-    <>
+    <div style={{ overflow: "hidden" }}>
       <Gradient>
         <HeroSection />
         <Services />
@@ -56,19 +55,15 @@ const Home = () => {
         <Makeus />
       </InitialAnimation>
       <Meet />
-
-      <InitialAnimation>
-        <Gallery />
-      </InitialAnimation>
+      <Gallery />
       <InitialAnimation>
         <Appointment />
       </InitialAnimation>
       <Review />
-      <Map/> 
+      <Map />
       <ScrollToTop />
       <FooterSection />
-     
-    </>
+    </div>
   );
 };
 export default Home;

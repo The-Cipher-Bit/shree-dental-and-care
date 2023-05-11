@@ -9,8 +9,7 @@ nav {
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100%;
-  top: 100;
+  width:100%;
   z-index: 1000;
 }
 .logo img {
@@ -83,4 +82,7 @@ nav {
 .teeth-text-color{
   color: #2f41e9;
   font-weight: 500;
+}
+header{
+  border:2px solid black;
 }

@@ -5,8 +5,8 @@
   }
   
   .container-map-left {
-    width: 100%;
-    max-width: 650px;
+    width: 50%;
+    max-width:50% ;
     margin: 12px 0px 65px 0;
   }
   
