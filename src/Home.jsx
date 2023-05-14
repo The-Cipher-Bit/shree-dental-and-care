@@ -42,7 +42,7 @@ const Home = () => {
     );
   };
   return (
-    <div style={{ overflow: "hidden" }}>
+    <>
       <Gradient>
         <HeroSection />
         <Services />
@@ -63,7 +63,8 @@ const Home = () => {
       <Map />
       <ScrollToTop />
       <FooterSection />
-    </div>
+    </>
+      
   );
 };
 export default Home;
