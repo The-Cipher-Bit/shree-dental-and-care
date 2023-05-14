@@ -1,10 +1,10 @@
 import "./appointment.css";
 import { useState, useEffect } from "react";
 import { HiOutlineXCircle } from "react-icons/hi";
-import DotLoader from "react-spinners/DotLoader";
 import * as LottiePlayer from "@lottiefiles/lottie-player";
 import { HiArrowSmRight } from "react-icons/hi";
 import { RiCheckboxCircleLine, RiCloseCircleLine } from "react-icons/ri";
+import PreLoader from "../PreLoader/PreLoader";
 
 const Appointment = () => {
   const [response, setResponse] = useState(null);
@@ -128,17 +128,13 @@ const Appointment = () => {
               <HiOutlineXCircle
                 onClick={() => {
                   setResponse(null);
-                  setShowResponse(false);
                 }}
               />
             </div>
           </div>
         )}
         {fetching && (
-          <div className="loader-for-mail">
-            <DotLoader color="#0d6efd" />
-            <p>Sending mail ... Please wait a few seconds </p>
-          </div>
+          <PreLoader text="Sending mail ... Please wait a few seconds "/>
         )}
         {!fetching && (
           <div className="conatiner-appointment-form">
