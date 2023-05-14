@@ -7,7 +7,7 @@ import Button from "../ButtonComponent/Button";
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { AnimatePresence , motion } from "framer-motion";
 
-const NavLinks = ({ handleLink = ''}) =>{
+const NavLinks = ({ handleLink = ()=>{}}) =>{
   return (
     <ul className="nav-list">
       <li>
