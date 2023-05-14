@@ -55,8 +55,7 @@ const HeroSection = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        duration: 0.5,
-        delay: 0.3,
+        duration: 0.3,
       },
     },
     leave: {

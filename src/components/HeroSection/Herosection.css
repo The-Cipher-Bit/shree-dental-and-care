@@ -140,12 +140,21 @@ nav {
   .clickable_buttons button{
     display: none;
   }
+  /* nav{
+    height: 80vh;
+  } */
   .hero-slider__content{
     width: 200px;
-    border:1px solid red;
     left:0%;
   }
 
+}
+
+@media screen and (max-height: 390px) {
+  nav{
+    min-height: 18vh;
+  }
+  
 }
 
 /* 612 for navbar */

@@ -85,6 +85,7 @@
 @media screen and (max-width: 530px) {
   .hero-slider__content {
     width: 100vw;
+    top:50%;
     left: 0;
     padding: 0 20px;
     line-height: 20px;
@@ -94,6 +95,25 @@
   }
   .title__middle{
     font-size: 2.6rem;
+  }
+  .hero-slider__description{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-height: 390px) {
+  .hero-slider__content {
+    width: 100vw;
+    top:30%;
+    left: 0;
+    padding: 0 20px;
+    line-height: 15px;
+  }
+  .hero-slider__title{
+    font-size: 1rem;
+  }
+  .title__middle{
+    font-size: 2rem;
   }
   .hero-slider__description{
     font-size: 1rem;

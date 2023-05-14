@@ -18,3 +18,29 @@
     background-color: #1fca66;
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 530px) {
+    
+.reusable__btn{
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .reusable__btn:hover{
+    color: inherit;
+    background-color: #2F41E9;
+    transform: none;
+    text-decoration: none;
+  }
+}
+@media screen and (max-height: 400px) {
+    .reusable__btn{
+        padding: 10px;
+    }
+     .reusable__btn:hover{
+    color: inherit;
+    background-color: #2F41E9;
+    transform: none;
+    text-decoration: none;
+  }
+}
