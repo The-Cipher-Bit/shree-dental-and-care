@@ -1,20 +1,21 @@
-import Aboutus from "./components/aboutus/Aboutus";
-import HeroSection from "./components/HeroSection/HeroSection";
-import Services from "./components/OurServices/Services";
-import Meet from "./components/MeetOurSpecialist/Meet";
-import Appointment from "./components/appointment/Appointment";
-import Gallery from "./components/Gallery/Gallery";
-import Consultation from "./components/sectiontwo/Consultation";
-import Makeus from "./components/sectionthree/Makeus";
-import Review from "./components/Reviews/Review";
-import FooterSection from "./components/footer/Footer";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import Map from "./components/Map/Map";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, lazy, Suspense, useEffect,useState } from "react";
 
-const Home = () => {
-  const Gradient = ({ children }) => {
+const Aboutus = lazy(() => import("./components/aboutus/Aboutus"));
+const HeroSection = lazy(() => import("./components/HeroSection/HeroSection"));
+const Services = lazy(() => import("./components/OurServices/Services"));
+const Meet = lazy(() => import("./components/MeetOurSpecialist/Meet"));
+const Appointment = lazy(() => import("./components/appointment/Appointment"));
+const Gallery = lazy(() => import("./components/Gallery/Gallery"));
+const Consultation = lazy(() => import("./components/sectiontwo/Consultation"));
+const Makeus = lazy(() => import("./components/sectionthree/Makeus"));
+const Review = lazy(() => import("./components/Reviews/Review"));
+const FooterSection = lazy(() => import("./components/footer/Footer"));
+const ScrollToTop = lazy(() => import("./components/ScrollToTop/ScrollToTop"));
+const Map = lazy(() => import("./components/Map/Map"));
+import PreLoader from "./components/PreLoader/PreLoader";
+
+ const Gradient = ({ children }) => {
     return (
       <div
         style={{
@@ -25,7 +26,8 @@ const Home = () => {
       </div>
     );
   };
-  const InitialAnimation = ({ children }) => {
+
+   const InitialAnimation = ({ children }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     return (
@@ -41,29 +43,61 @@ const Home = () => {
       </motion.div>
     );
   };
+
+const Home = () => {
+ const [loading , setLoading] = useState(true);
+ useEffect(()=>{
+  window.addEventListener("load", () => {
+    setLoading(false)
+  }
+  )
+ },[])
+ 
   return (
-    <div style={{ overflow: "hidden" }}>
-      <Gradient>
-        <HeroSection />
-        <Services />
+    <>
+     {loading ? (
+      <PreLoader text="loading..." />
+      ):(
+        <> <Gradient>
+        <Suspense fallback={<PreLoader text="loading..." />}>
+          <HeroSection />
+          <Services />
+        </Suspense>
       </Gradient>
       <InitialAnimation>
-        <Aboutus />
+        <Suspense fallback={<PreLoader text="loading..." />}>
+          <Aboutus />
+        </Suspense>
       </InitialAnimation>
-      <Consultation />
+      <Suspense fallback={<PreLoader text="loading..." />}>
+        <Consultation />
+      </Suspense>
       <InitialAnimation>
-        <Makeus />
+        <Suspense fallback={<PreLoader text="loading..." />}>
+          <Makeus />
+        </Suspense>
       </InitialAnimation>
-      <Meet />
-      <Gallery />
+      <Suspense fallback={<PreLoader text="loading..." />}>
+        <Meet />
+      </Suspense>
+      <Suspense fallback={<PreLoader text="loading..." />}>
+        <Gallery />
+      </Suspense>
       <InitialAnimation>
-        <Appointment />
+        <Suspense fallback={<PreLoader text="loading..." />}>
+          <Appointment />
+        </Suspense>
       </InitialAnimation>
-      <Review />
-      <Map />
+      <Suspense fallback={<PreLoader text="loading..." />}>
+        <Review />
+        <Map />
+      </Suspense>
       <ScrollToTop />
       <FooterSection />
-    </div>
+        </>
+        
+      )}
+    </>
   );
 };
 export default Home;

@@ -1,14 +1,17 @@
 //node mailer with serverless function
+
 import nodemailer from "nodemailer";
 //dotenv for accessing environment variables
 import { config } from "dotenv";
 import path from "path";
+
+//accessing directory name for image in email
 const __dirname = path.resolve();
 config();
 
 
 
-
+//creating transporter for sending email
  const transporter = nodemailer.createTransport({
    service: "gmail",
    auth: {
@@ -21,7 +24,7 @@ config();
    },
  });
 
-
+//function for sending email
 async function sendEmail({ fullname, address, age, email, date, message,phone }) {
    const mailOptions = {
      from: `"${fullname}" <${email}>`,
@@ -100,6 +103,8 @@ async function sendEmail({ fullname, address, age, email, date, message,phone })
 
   return transporter.sendMail(mailOptions);
 }
+
+//handler function for serverless function
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     // console.log(req.body.formData);

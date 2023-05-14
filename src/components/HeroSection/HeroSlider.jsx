@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import "./Heroslider.css";
 import HeroImage1 from "../../assets/images/heroimage-1.png";
 import HeroImage2 from "../../assets/images/heroimage-2.jpg";
+import HeroImage3 from "../../assets/images/heroimage-3.jpg";
 import Button from "../ButtonComponent/Button";
 
 const HeroSlider = () => {
   const images = [
     HeroImage1,
     HeroImage2,
+    HeroImage3,
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -23,6 +25,7 @@ const HeroSlider = () => {
   }, [currentIndex, images.length]);
 
   return (
+    
     <div className="hero-slider">
       <div className="hero-slider__overlay"></div>
       <div
