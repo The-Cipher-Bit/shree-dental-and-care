@@ -45,19 +45,19 @@ import PreLoader from "./components/PreLoader/PreLoader";
   };
 
 const Home = () => {
- const [loading , setLoading] = useState(true);
- useEffect(()=>{
-  window.addEventListener("load", () => {
-    setLoading(false)
-  }
-  )
- },[])
+//  const [loading , setLoading] = useState(true);
+//  useEffect(()=>{
+//   window.addEventListener("load", () => {
+//     setLoading(false)
+//   }
+//   )
+//  },[])
  
   return (
     <>
-     {loading ? (
+     {/* {loading ? (
       <PreLoader text="loading..." />
-      ):(
+      ):( */}
         <> <Gradient>
         <Suspense fallback={<PreLoader text="loading..." />}>
           <HeroSection />
@@ -96,7 +96,7 @@ const Home = () => {
       <FooterSection />
         </>
         
-      )}
+      {/* )} */}
     </>
   );
 };
