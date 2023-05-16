@@ -1,6 +1,7 @@
 import "./Aboutus.css";
 import Doctor from "../../assets/images/doctor.png";
 import Button from "../ButtonComponent/Button";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const Aboutus = () => {
   return (
     <>
@@ -17,7 +18,7 @@ const Aboutus = () => {
           <Button text="Learn More" />
         </div>
         <div className="container-aboutus-right">
-          <img src={Doctor} alt="Doctor1" />
+          <LazyLoadImage src={Doctor} alt="Doctor1" />
         </div>
       </div>
     </>
