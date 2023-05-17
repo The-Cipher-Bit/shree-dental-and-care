@@ -72,7 +72,7 @@ function Consultation() {
             <div className="container-bookappointment">
               <div className="container-bookappointment_doctor_info">
                 <div className="container-bookappointment_doctor_info_left">
-                  <RiUserFollowFill size={25} color="white" />
+                  <RiUserFollowFill className="consulation-icon" size={25} color="white" />
                 </div>
                 <div className="container-bookappointment_doctor_info_right">
                   <h2 className="title_font">{activeDoctor.doctorName}</h2>
