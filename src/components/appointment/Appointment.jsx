@@ -1,5 +1,5 @@
 import "./appointment.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef} from "react";
 import { HiOutlineXCircle } from "react-icons/hi";
 import * as LottiePlayer from "@lottiefiles/lottie-player";
 import { HiArrowSmRight } from "react-icons/hi";
@@ -7,20 +7,29 @@ import { RiCheckboxCircleLine, RiCloseCircleLine } from "react-icons/ri";
 import PreLoader from "../PreLoader/PreLoader";
 
 const Appointment = () => {
+  const nameRef = useRef();
+  const addressRef = useRef();
+  const ageRef = useRef();
+  const emailRef = useRef();
+  const phoneRef = useRef();
+  const dateRef = useRef();
+  const messageRef = useRef();
   const [response, setResponse] = useState(null);
   const [fetching, setFetching] = useState(false);
-  const [formData, setFormData] = useState({
-    fullname: "",
-    address: "",
-    age: "",
-    email: "",
-    date: "",
-    message: "",
-    phone: "",
-  });
+
+
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     setFetching(true);
+      const formData = {
+        fullname: nameRef.current.value,
+        address: addressRef.current.value,
+        age: ageRef.current.value,
+        email: emailRef.current.value,
+        date: dateRef.current.value,
+        message: messageRef.current.value,
+        phone: phoneRef.current.value,
+      };
     //here /api/send is used as vercel.json has routes for /api/send to be redirected to api/server.js
     const res = await fetch(`/api/send`, {
       method: "POST",
@@ -34,15 +43,15 @@ const Appointment = () => {
       setFetching(false);
       if (res.status === 200) {
         setResponse(data.message);
-        setFormData({
-          fullname: "",
-          address: "",
-          age: "",
-          email: "",
-          phone: "",
-          date: "",
-          message: "",
-        });
+        // formData = {
+        //   fullname: "",
+        //   address: "",
+        //   age: "",
+        //   email: "",
+        //   phone: "",
+        //   date: "",
+        //   message: "",
+        // };
       } else {
         setResponse(data.message);
       }
@@ -169,21 +178,17 @@ const Appointment = () => {
                   <input
                     type="text"
                     className="fullnanme"
-                    value={formData.fullname}
-                    onChange={(ev) =>
-                      setFormData({ ...formData, fullname: ev.target.value })
-                    }
+                    // value={formData.fullname}
+                    ref={nameRef}
                   />
                 </div>
                 <div className="form-field">
                   <label htmlFor="address">Address</label>
                   <input
                     type="text"
-                    onChange={(ev) =>
-                      setFormData({ ...formData, address: ev.target.value })
-                    }
+                    ref={addressRef}
                     className="address"
-                    value={formData.address}
+                    // value={formData.address}
                   />
                 </div>
                 <div className="form-field">
@@ -192,10 +197,8 @@ const Appointment = () => {
                     type="number"
                     min={1}
                     className="age"
-                    onChange={(ev) =>
-                      setFormData({ ...formData, age: ev.target.value })
-                    }
-                    value={formData.age}
+                   ref={ageRef}
+                    // value={formData.age}
                   />
                 </div>
                 <div className="form-field">
@@ -205,10 +208,8 @@ const Appointment = () => {
                     minLength={10}
                     maxLength={25}
                     className="age"
-                    onChange={(ev) =>
-                      setFormData({ ...formData, phone: ev.target.value })
-                    }
-                    value={formData.phone}
+                    ref={phoneRef}
+                    // value={formData.phone}
                   />
                 </div>
                 <div className="form-field">
@@ -217,10 +218,8 @@ const Appointment = () => {
                     required
                     type="email"
                     className="email"
-                    value={formData.email}
-                    onChange={(ev) =>
-                      setFormData({ ...formData, email: ev.target.value })
-                    }
+                    // value={formData.email}
+                    ref={emailRef}
                   />
                 </div>
                 <div className="form-field">
@@ -228,11 +227,9 @@ const Appointment = () => {
                   <input
                     type="date"
                     className="date"
-                    value={formData.date}
+                    // value={formData.date}
                     min={currentDate}
-                    onChange={(ev) =>
-                      setFormData({ ...formData, date: ev.target.value })
-                    }
+                   ref={dateRef}
                   />
                 </div>
                 <div className="form-field">
@@ -241,11 +238,9 @@ const Appointment = () => {
                     rows={5}
                     cols={50}
                     type="text"
-                    className="message"
-                    value={formData.message}
-                    onChange={(ev) =>
-                      setFormData({ ...formData, message: ev.target.value })
-                    }
+                    // className="message"
+                    // value={formData.message}
+                    ref={messageRef}
                   />
                 </div>
                 <div className="form-field">

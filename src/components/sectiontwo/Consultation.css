@@ -299,6 +299,57 @@ width: 260px;
 }
 @media only screen and (max-width: 576px) {
   /* Styles for extra small devices */ 
+  .container-consultation{
+    display: flex;
+    flex-direction: column;
+  }
+  .consultation-image-container{
+    height: 250px;
+    width: 230px;
+  }
+  .consultation-image-container img{
+    height: 230px;
+    width: 230px;
+    
+  }
+  .container-bookappointment{
+    height: 200px ;
+    width: 200px;
+    top: 190px;
+    right: -90px;
+    padding: 10px;
+  }
+  .container-consultation-left{
+    margin-left: 160px;
+  }
+  .container-consultation-right {
+    margin-top: 100px;
+    display: flex;
+    
+  }
+  .container-consultation-right h1,.container-consultation-right h2{
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .container-consultation-right p{
+    font-size: 0.9rem;
+    font-size: 200;
+    text-align: center;
+
+  }
+  .container-consultation-right{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin-left: 40px;
+  }
+  .doctors_field_card{
+    height: 15vh;
+  }
+  .detail-section-field-data h2{
+    font-size: 1.2rem;
+  }
+
 
 }
 

@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, lazy, Suspense, useEffect,useState } from "react";
+import { useRef, lazy, Suspense} from "react";
 
 const Aboutus = lazy(() => import("./components/aboutus/Aboutus"));
 const HeroSection = lazy(() => import("./components/HeroSection/HeroSection"));
@@ -14,6 +14,7 @@ const FooterSection = lazy(() => import("./components/footer/Footer"));
 const ScrollToTop = lazy(() => import("./components/ScrollToTop/ScrollToTop"));
 const Map = lazy(() => import("./components/Map/Map"));
 import PreLoader from "./components/PreLoader/PreLoader";
+
 
  const Gradient = ({ children }) => {
     return (
@@ -45,20 +46,9 @@ import PreLoader from "./components/PreLoader/PreLoader";
   };
 
 const Home = () => {
-//  const [loading , setLoading] = useState(true);
-//  useEffect(()=>{
-//   window.addEventListener("load", () => {
-//     setLoading(false)
-//   }
-//   )
-//  },[])
- 
   return (
     <>
-     {/* {loading ? (
-      <PreLoader text="loading..." />
-      ):( */}
-        <> <Gradient>
+         <Gradient>
         <Suspense fallback={<PreLoader text="loading..." />}>
           <HeroSection />
           <Services />
@@ -94,9 +84,6 @@ const Home = () => {
       </Suspense>
       <ScrollToTop />
       <FooterSection />
-        </>
-        
-      {/* )} */}
     </>
   );
 };
