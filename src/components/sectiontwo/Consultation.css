@@ -157,7 +157,7 @@
     font-size: 1.9rem;
   }
 }
-@media screen and (max-width: 1024px) {
+@media only screen and (min-width:769px) and (max-width: 1024px) {
   .container-consultation {
     /* margin-top: 80px; */
     margin: 30px 0;
@@ -234,16 +234,16 @@
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .container-consultation{
-    margin: 30px 0px 0px 0;
+    margin: 100px 0px 0px 0;
   }
  .container-bookappointment{
-  top: 246px;
-    right: -92px;
-    padding: 20px;
+  top: 241px;
+    right: -27px;
+    padding: 8px;
     position: absolute;
     border-radius: 20px;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
 }
  
   .container-consultation-right{
@@ -280,6 +280,26 @@
     font-size: 1.2rem;
     font-weight: 500;
   }
+.container-bookappointment_doctor_info_right h2{
+font-size:0.9rem;
+
+}
+.container-bookappointment_doctor_availability{
+  margin-bottom: 5px;
+}
+.consultation-image-container{
+height: 280px;
+width: 260px;
+}
+.consultation-image-container img{
+  height: 260px;
+  top: 4px;
+}
   
 }
+@media only screen and (max-width: 576px) {
+  /* Styles for extra small devices */ 
+
+}
+
   
