@@ -139,3 +139,19 @@
     width: 40%;
   }
 }
+@media screen and (max-width: 480px) {
+  .container-aboutus{
+    margin: 50px 0;
+  }
+  .container-aboutus-left h2{
+    font-size: 2rem;
+
+  }
+  .container-aboutus-left p{
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+ .container-aboutus-right {
+  margin-top: 140px;
+ }
+}
