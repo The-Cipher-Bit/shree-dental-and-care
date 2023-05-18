@@ -48,5 +48,43 @@
     color: #6c757d;
 }
 @media screen and (max-width:1200px){
+  .servicecard_container{
+    display: flex;
+    flex: 1;
+  }
+   .servicecard_content{
+    padding: 40px;
+    width: 300px;
+    max-height: 300px;
+    padding: 20px;
+    
+   }
+   .services_cards {
+    
+    margin-top: 30px;
+  }
+
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+.servicecard_container{
+  margin: 10px 10px;
+  padding: 10px 30px;
+}
+.servicecard_content{
+  max-width: 280px;
+  max-height: 290px;
+}
+.services_container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.servicecard_container {
   
+  max-width: 300px;
+  padding: 50px;
+  max-height: 330px;
+  margin: 20px 20px;
+}
+
 }
