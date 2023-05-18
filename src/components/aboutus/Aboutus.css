@@ -155,3 +155,20 @@
   margin-top: 140px;
  }
 }
+/* Styles for smallest mobile devices */
+@media screen and (max-width: 360px) {
+  /* CSS styles for smallest mobile devices */
+  .container-aboutus-left h2{
+  font-size: 1.5rem;
+
+  }
+  .container-aboutus-left p{
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  .container-aboutus-right{
+    height: 250px;
+    width: 250px;
+    margin-top: 170px;
+  }
+}
