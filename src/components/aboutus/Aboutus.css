@@ -154,6 +154,12 @@
  .container-aboutus-right {
   margin-top: 140px;
  }
+ .container-aboutus-right {
+border-radius: 50%;
+height: 230px;
+width: 230px;
+ }
+ 
 }
 /* Styles for smallest mobile devices */
 @media screen and (max-width: 360px) {
