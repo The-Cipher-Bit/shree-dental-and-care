@@ -159,7 +159,7 @@ border-radius: 50%;
 height: 230px;
 width: 230px;
  }
- 
+
 }
 /* Styles for smallest mobile devices */
 @media screen and (max-width: 360px) {
@@ -177,4 +177,30 @@ width: 230px;
     width: 250px;
     margin-top: 170px;
   }
+  
+}
+@media only screen and (max-width: 390px) { 
+  .container-aboutus {
+    margin: 5px 0;
+    width: 100%;
+}
+  .reusable__btn{
+margin-top: 40px;
+  }
+  .container-aboutus-left h2{
+    font-size: 1.4rem;
+  
+    }
+    .container-aboutus-left p{
+      font-size: 0.9rem;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    .container-aboutus-right{
+      height: 230px;
+      width: 230px;
+      margin-top: 150px;
+    }
+    
 }
