@@ -1,5 +1,4 @@
 .container-meet-specialist{
-    padding: 50px;
     margin: 50px 0px; 
 }
 .container-meet-specialist h2{
@@ -9,7 +8,7 @@
 /* card css */
 
 .container-specialist-image{
-    height: 42vh;
+    height: auto;
     width: 19vw;
     border-radius: 12px;
     background-color: #E2EEFA;
@@ -31,11 +30,32 @@
     margin: 3px 0;
 
 }
+
 /* Media Queries */
+@media (max-width: 1024px){
+
+  h2{
+    margin-bottom: 10px;
+  }
+  .container-meet-specialist{
+    margin: 0;
+  }
+  .container-specialist-image {
+    height: auto;
+    width: 90%;
+    margin-bottom: 12px;
+  }
+
+  .container-meet-mapping{
+    padding: 0 20px;
+  }
+}
 @media (max-width: 768px) {
     .container-meet-specialist {
       padding: 30px;
-      margin: 30px 0;
+      margin-top: 30px;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
   
     .container-meet-specialist h2 {
@@ -56,6 +76,10 @@
       flex-wrap: wrap;
       padding: 30px;
     }
+
+    p{
+      padding-bottom: 20px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -69,7 +93,7 @@
     }
   
     .container-specialist-image {
-      width: 100%;
+      width: 80%;
     }
   
     .container-meet-mapping {
