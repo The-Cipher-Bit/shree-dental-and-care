@@ -50,6 +50,7 @@
   margin-bottom: 1rem;
     background: linear-gradient(90deg, rgba(46,236,25,1) 0%, rgba(47,65,233,1) 100%);
   -webkit-background-clip: text;
+  background-clip: none;
   -webkit-text-fill-color: transparent;
  /* color:linear-gradient(90deg, rgba(46,236,25,1) 0%, rgba(47,65,233,1) 100%); */
 }
@@ -118,6 +119,7 @@ input:focus,textarea:focus{
   margin-top: 3rem;
   background: linear-gradient(90deg, rgba(46,236,25,1) 0%, rgba(47,65,233,1) 100%);
   -webkit-background-clip: text;
+  background-clip: none;
   -webkit-text-fill-color: transparent;
 }
 
