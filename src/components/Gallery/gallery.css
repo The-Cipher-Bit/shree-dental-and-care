@@ -125,6 +125,10 @@
     column-fill: balance;
   }
 
+  .main-container-gallery{
+    margin-top: 0;
+  }
+
   .my-masonry-grid_column:nth-child(2) .masonry-item--lower:nth-child(2) {
     margin-top: 0;
   }

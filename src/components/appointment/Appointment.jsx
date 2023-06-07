@@ -1,26 +1,34 @@
 import "./appointment.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { HiOutlineXCircle } from "react-icons/hi";
-import DotLoader from "react-spinners/DotLoader";
 import * as LottiePlayer from "@lottiefiles/lottie-player";
 import { HiArrowSmRight } from "react-icons/hi";
 import { RiCheckboxCircleLine, RiCloseCircleLine } from "react-icons/ri";
+import PreLoader from "../PreLoader/PreLoader";
 
 const Appointment = () => {
+  const nameRef = useRef();
+  const addressRef = useRef();
+  const ageRef = useRef();
+  const emailRef = useRef();
+  const phoneRef = useRef();
+  const dateRef = useRef();
+  const messageRef = useRef();
   const [response, setResponse] = useState(null);
   const [fetching, setFetching] = useState(false);
-  const [formData, setFormData] = useState({
-    fullname: "",
-    address: "",
-    age: "",
-    email: "",
-    date: "",
-    message: "",
-    phone: "",
-  });
+
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     setFetching(true);
+    const formData = {
+      fullname: nameRef.current.value,
+      address: addressRef.current.value,
+      age: ageRef.current.value,
+      email: emailRef.current.value,
+      date: dateRef.current.value,
+      message: messageRef.current.value,
+      phone: phoneRef.current.value,
+    };
     //here /api/send is used as vercel.json has routes for /api/send to be redirected to api/server.js
     const res = await fetch(`/api/send`, {
       method: "POST",
@@ -34,15 +42,15 @@ const Appointment = () => {
       setFetching(false);
       if (res.status === 200) {
         setResponse(data.message);
-        setFormData({
-          fullname: "",
-          address: "",
-          age: "",
-          email: "",
-          phone: "",
-          date: "",
-          message: "",
-        });
+        // formData = {
+        //   fullname: "",
+        //   address: "",
+        //   age: "",
+        //   email: "",
+        //   phone: "",
+        //   date: "",
+        //   message: "",
+        // };
       } else {
         setResponse(data.message);
       }
@@ -60,7 +68,7 @@ const Appointment = () => {
     return () => clearTimeout(timer);
   }, [response]);
 
-  if(response !== null && response === "success"){
+  if (response !== null && response === "success") {
     const html_snnipet = (
       <>
         <div className="response_icon_success">
@@ -72,18 +80,19 @@ const Appointment = () => {
         </div>
       </>
     );
-   } else if(response !== null && response === "fail"){
-     const html_snnipet = (
+  } else if (response !== null && response === "fail") {
+    const html_snnipet = (
       <>
-      <div className="response_icon_fail">
-                <RiCloseCircleLine />
-              </div>
-              <div className="response_info_fail">
-                <h2 className="title_font">Mail Not Sent!</h2>
-                <p>Something went wrong. Please try again later.</p>
-              </div>
-            </>
-   )}
+        <div className="response_icon_fail">
+          <RiCloseCircleLine />
+        </div>
+        <div className="response_info_fail">
+          <h2 className="title_font">Mail Not Sent!</h2>
+          <p>Something went wrong. Please try again later.</p>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
@@ -104,41 +113,37 @@ const Appointment = () => {
           <div className="response_info_container">
             {console.log(response)}
             {response === "success" ? (
-                <>
-                  <div className="response_icon_success">
-                    <RiCheckboxCircleLine />
-                  </div>
-                  <div className="response_info_success">
-                    <h2 className="title_font">Mail Sent!</h2>
-                    <p>We will contact you soon. Thank you!</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="response_icon_fail">
-                    <RiCloseCircleLine />
-                  </div>
-                  <div className="response_info_fail">
-                    <h2 className="title_font">Mail Not Sent!</h2>
-                    <p>Something went wrong. Please try again later.</p>
-                  </div>
-                </>
-              )}
+              <>
+                <div className="response_icon_success">
+                  <RiCheckboxCircleLine />
+                </div>
+                <div className="response_info_success">
+                  <h2 className="title_font">Mail Sent!</h2>
+                  <p>We will contact you soon. Thank you!</p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="response_icon_fail">
+                  <RiCloseCircleLine />
+                </div>
+                <div className="response_info_fail">
+                  <h2 className="title_font">Mail Not Sent!</h2>
+                  <p>Something went wrong. Please try again later.</p>
+                </div>
+              </>
+            )}
             <div className="response_close_button">
               <HiOutlineXCircle
                 onClick={() => {
                   setResponse(null);
-                  setShowResponse(false);
                 }}
               />
             </div>
           </div>
         )}
         {fetching && (
-          <div className="loader-for-mail">
-            <DotLoader color="#0d6efd" />
-            <p>Sending mail ... Please wait a few seconds </p>
-          </div>
+          <PreLoader text="Sending mail ... Please wait a few seconds " />
         )}
         {!fetching && (
           <div className="conatiner-appointment-form">
@@ -173,21 +178,17 @@ const Appointment = () => {
                   <input
                     type="text"
                     className="fullnanme"
-                    value={formData.fullname}
-                    onChange={(ev) =>
-                      setFormData({ ...formData, fullname: ev.target.value })
-                    }
+                    // value={formData.fullname}
+                    ref={nameRef}
                   />
                 </div>
                 <div className="form-field">
                   <label htmlFor="address">Address</label>
                   <input
                     type="text"
-                    onChange={(ev) =>
-                      setFormData({ ...formData, address: ev.target.value })
-                    }
+                    ref={addressRef}
                     className="address"
-                    value={formData.address}
+                    // value={formData.address}
                   />
                 </div>
                 <div className="form-field">
@@ -195,11 +196,10 @@ const Appointment = () => {
                   <input
                     type="number"
                     min={1}
+                    max={100}
                     className="age"
-                    onChange={(ev) =>
-                      setFormData({ ...formData, age: ev.target.value })
-                    }
-                    value={formData.age}
+                    ref={ageRef}
+                    // value={formData.age}
                   />
                 </div>
                 <div className="form-field">
@@ -209,10 +209,8 @@ const Appointment = () => {
                     minLength={10}
                     maxLength={25}
                     className="age"
-                    onChange={(ev) =>
-                      setFormData({ ...formData, phone: ev.target.value })
-                    }
-                    value={formData.phone}
+                    ref={phoneRef}
+                    // value={formData.phone}
                   />
                 </div>
                 <div className="form-field">
@@ -221,10 +219,8 @@ const Appointment = () => {
                     required
                     type="email"
                     className="email"
-                    value={formData.email}
-                    onChange={(ev) =>
-                      setFormData({ ...formData, email: ev.target.value })
-                    }
+                    // value={formData.email}
+                    ref={emailRef}
                   />
                 </div>
                 <div className="form-field">
@@ -232,28 +228,24 @@ const Appointment = () => {
                   <input
                     type="date"
                     className="date"
-                    value={formData.date}
+                    // value={formData.date}
                     min={currentDate}
-                    onChange={(ev) =>
-                      setFormData({ ...formData, date: ev.target.value })
-                    }
+                    ref={dateRef}
                   />
                 </div>
                 <div className="form-field">
-                  <label htmlFor="message">Consultants Problems</label>
+                  <label htmlFor="message">Consultant's Problems</label>
                   <textarea
                     rows={5}
                     cols={50}
                     type="text"
-                    className="message"
-                    value={formData.message}
-                    onChange={(ev) =>
-                      setFormData({ ...formData, message: ev.target.value })
-                    }
+                    // className="message"
+                    // value={formData.message}
+                    ref={messageRef}
                   />
                 </div>
                 <div className="form-field">
-                  <input type="submit" value="send" />
+                  <input type="submit" value="Send" />
                 </div>
               </form>
             </div>

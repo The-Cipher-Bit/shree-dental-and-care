@@ -8,6 +8,7 @@ import photoE from "../../assets/images/GallB.webp";
 import photoF from "../../assets/images/GallC.jpg";
 import { HiOutlineXCircle } from "react-icons/hi";
 import Masonry from "react-masonry-css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const images = [
   { id: 1, src: photoA },
@@ -59,7 +60,8 @@ function Gallery() {
               } ${index === 4 ? "special-image" : ""}`}
               key={image.id}
             >
-              <img
+              <LazyLoadImage
+              effect="blur"
                 src={image.src}
                 alt={`photo-${image.id}`}
                 onClick={() => handleImageClick(image)}

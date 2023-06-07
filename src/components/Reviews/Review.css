@@ -1,51 +1,136 @@
+/* heading css */
+.container-review-heading h2 {
+  font-size: 2.8rem;
+  text-align: center;
+}
 
-  /* heading css */
-  .container-review-heading h2{
-    font-size: 2.8rem;
-    text-align: center;
-  }
-
-
-.container-client-message{
-  background-color: #E0ECFF;
+.container-client-message {
+  background-color: #e0ecff;
   height: 35vh;
   width: 45vw;
   margin: 25px 50px;
   border-radius: 12px;
   border-left: 8px solid blue;
-   padding: 20px;
+  padding: 20px;
 }
 
-.container-reviewmessage{
+.container-reviewmessage {
   display: flex;
-
 }
-.container-reviewmessage span{
+.container-reviewmessage span {
   margin-top: 5px;
   margin-left: 40px;
 }
-.container-customer-info{
+.container-customer-info {
   display: flex;
   justify-content: flex-start;
   padding: 30px;
   height: 19vh;
   width: 32vw;
-
 }
-.container-customer-info img{
+.container-customer-info img {
   height: 80px;
   width: 80px;
-  margin:0 30px 0 0;
-  object-fit:cover;
+  margin: 0 30px 0 0;
+  object-fit: cover;
   border-radius: 122px;
 }
-.container-customer-info h3{
+.container-customer-info h3 {
   font-weight: 500;
 }
-.container-customer-info_name{
+.container-customer-info_name {
   margin-top: 20px;
 }
-.mySwiper{
-   margin: 100px 0;
+.mySwiper {
+  margin: 100px 0;
 }
+@media screen and (max-width: 1200px) {
+  .container-review-heading h2 {
+    font-size: 2.6rem;
+  }
+  .container-client-message {
+    height: 32vh;
+    width: 43vw;
+    margin: 14px 24px;
+    padding: 12px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container-review-heading h2 {
+    font-size: 2.3rem;
+  }
+  .container-client-message {
+    height: 35vh;
+    width: 43vw;
+    margin: 10px 41px;
+    padding: 10px;
+  }
+  .container-reviewmessage p {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .container-review-heading h2 {
+    font-size: 1.8rem;
+  }
+  .container-client-message {
+  height: 29vh;
+    width: 43vw;
+    margin: 10px 10px;
+    padding: 12px;
+}
+.container-reviewmessage p {
+  font-size: 0.8rem;
+}
+.container-reviewmessage span {
+  margin-left: 20px;
+  
+}
+.container-reviewmessage{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+}
+@media only screen and (max-width: 576px) {
+  .container-review-heading h2 {
+    font-size: 1.5rem;
+  }
+  .container-client-message{
+padding: 10px;
+  }
+  .container-reviewmessage p{
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .container-reviewmessage{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    /* margin-bottom: 10px; */
+  }
+  .container-reviewmessage span {
+    margin-left: 15px;
+    margin-bottom: 5px;
+    
+  }
+  .container-customer-info img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+  }
+  .container-customer-info h3{
+    font-size: 1rem;
+    
+  }
+  
+  .container-customer-info {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+   
+  }
+}
+@media screen and (max-width: 480px) {
 
+}
