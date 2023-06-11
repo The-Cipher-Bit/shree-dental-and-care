@@ -1,5 +1,5 @@
 import "./appointment.css";
-import { useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import { HiOutlineXCircle } from "react-icons/hi";
 import * as LottiePlayer from "@lottiefiles/lottie-player";
 import { HiArrowSmRight } from "react-icons/hi";
@@ -17,19 +17,18 @@ const Appointment = () => {
   const [response, setResponse] = useState(null);
   const [fetching, setFetching] = useState(false);
 
-
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     setFetching(true);
-      const formData = {
-        fullname: nameRef.current.value,
-        address: addressRef.current.value,
-        age: ageRef.current.value,
-        email: emailRef.current.value,
-        date: dateRef.current.value,
-        message: messageRef.current.value,
-        phone: phoneRef.current.value,
-      };
+    const formData = {
+      fullname: nameRef.current.value,
+      address: addressRef.current.value,
+      age: ageRef.current.value,
+      email: emailRef.current.value,
+      date: dateRef.current.value,
+      message: messageRef.current.value,
+      phone: phoneRef.current.value,
+    };
     //here /api/send is used as vercel.json has routes for /api/send to be redirected to api/server.js
     const res = await fetch(`/api/send`, {
       method: "POST",
@@ -69,7 +68,7 @@ const Appointment = () => {
     return () => clearTimeout(timer);
   }, [response]);
 
-  if(response !== null && response === "success"){
+  if (response !== null && response === "success") {
     const html_snnipet = (
       <>
         <div className="response_icon_success">
@@ -81,18 +80,19 @@ const Appointment = () => {
         </div>
       </>
     );
-   } else if(response !== null && response === "fail"){
-     const html_snnipet = (
+  } else if (response !== null && response === "fail") {
+    const html_snnipet = (
       <>
-      <div className="response_icon_fail">
-                <RiCloseCircleLine />
-              </div>
-              <div className="response_info_fail">
-                <h2 className="title_font">Mail Not Sent!</h2>
-                <p>Something went wrong. Please try again later.</p>
-              </div>
-            </>
-   )}
+        <div className="response_icon_fail">
+          <RiCloseCircleLine />
+        </div>
+        <div className="response_info_fail">
+          <h2 className="title_font">Mail Not Sent!</h2>
+          <p>Something went wrong. Please try again later.</p>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
@@ -113,26 +113,26 @@ const Appointment = () => {
           <div className="response_info_container">
             {console.log(response)}
             {response === "success" ? (
-                <>
-                  <div className="response_icon_success">
-                    <RiCheckboxCircleLine />
-                  </div>
-                  <div className="response_info_success">
-                    <h2 className="title_font">Mail Sent!</h2>
-                    <p>We will contact you soon. Thank you!</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="response_icon_fail">
-                    <RiCloseCircleLine />
-                  </div>
-                  <div className="response_info_fail">
-                    <h2 className="title_font">Mail Not Sent!</h2>
-                    <p>Something went wrong. Please try again later.</p>
-                  </div>
-                </>
-              )}
+              <>
+                <div className="response_icon_success">
+                  <RiCheckboxCircleLine />
+                </div>
+                <div className="response_info_success">
+                  <h2 className="title_font">Mail Sent!</h2>
+                  <p>We will contact you soon. Thank you!</p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="response_icon_fail">
+                  <RiCloseCircleLine />
+                </div>
+                <div className="response_info_fail">
+                  <h2 className="title_font">Mail Not Sent!</h2>
+                  <p>Something went wrong. Please try again later.</p>
+                </div>
+              </>
+            )}
             <div className="response_close_button">
               <HiOutlineXCircle
                 onClick={() => {
@@ -143,7 +143,7 @@ const Appointment = () => {
           </div>
         )}
         {fetching && (
-          <PreLoader text="Sending mail ... Please wait a few seconds "/>
+          <PreLoader text="Sending mail ... Please wait a few seconds " />
         )}
         {!fetching && (
           <div className="conatiner-appointment-form">
@@ -196,8 +196,9 @@ const Appointment = () => {
                   <input
                     type="number"
                     min={1}
+                    max={100}
                     className="age"
-                   ref={ageRef}
+                    ref={ageRef}
                     // value={formData.age}
                   />
                 </div>
@@ -229,11 +230,11 @@ const Appointment = () => {
                     className="date"
                     // value={formData.date}
                     min={currentDate}
-                   ref={dateRef}
+                    ref={dateRef}
                   />
                 </div>
                 <div className="form-field">
-                  <label htmlFor="message">Consultants Problems</label>
+                  <label htmlFor="message">Consultant's Problems</label>
                   <textarea
                     rows={5}
                     cols={50}
@@ -244,7 +245,7 @@ const Appointment = () => {
                   />
                 </div>
                 <div className="form-field">
-                  <input type="submit" value="send" />
+                  <input type="submit" value="Send" />
                 </div>
               </form>
             </div>
