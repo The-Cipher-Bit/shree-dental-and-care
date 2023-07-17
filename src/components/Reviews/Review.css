@@ -132,5 +132,56 @@ padding: 10px;
   }
 }
 @media screen and (max-width: 480px) {
+  .container-review-heading h2 {
+    font-size: 1.3rem;
+  }
+  .container-client-message{
+    padding: 5px;
+      }
+      .container-reviewmessage p{
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+      }
+      .container-customer-info h3{
+        font-size: 0.9rem;
+        
+      }
+      .container-customer-info img{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+      }
 
+}
+@media screen and (max-width: 390px) { 
+  .container-review-heading h2 {
+    font-size: 1rem;
+  }
+  .container-client-message{
+    padding: 1px;
+      }
+      .container-reviewmessage p{
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+      }
+      .container-customer-info h3{
+        font-size: 0.8rem;
+        
+      }
+      .container-customer-info {
+        padding: 0;
+      }
+      .container-customer-info_name {
+        margin-top: 5px;
+        
+      }
+      .container-customer-info_name p{
+        font-size: 1rem;
+      }
+      .container-customer-info img{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+      
 }
