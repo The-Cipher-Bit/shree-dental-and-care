@@ -163,6 +163,11 @@
     margin-top: 10px;
     margin-bottom: 30px;
   }
+  .container-aboutus-left {
+  
+  width: 100%;
+    padding: 10px;
+  }
 
   .container-aboutus-right {
     height: 230px;
@@ -170,23 +175,4 @@
     margin-top: 200px;
   }
 }
-/* Styles for smallest mobile devices */
-/* @media screen and (max-width: 390px) {
-  /* CSS styles for smallest mobile devices */
-  /* .container-aboutus-left h2 {
-    font-size: 1.3rem;
-  }
-  .container-aboutus-left p {
-    font-size: 0.5rem;
-    margin-top: 10px;
-    margin-bottom: 30px;
-  }
-  .container-aboutus-right {
-    height: 220px;
-    width: 220px;
-    margin-top: 270px;
-  }
-  /* .reusable__btn{
-    margin-bottom: 20px;
-  } */
 
